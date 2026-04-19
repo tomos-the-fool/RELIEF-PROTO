@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会員登録 - Relief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-700">
+    <!-- ナビゲーションバー -->
+    <div id="nav"></div>
+
+    <!-- メインコンテンツ -->
+    <main class="max-w-3xl mx-auto p-4 py-12">
+        <h1 class="text-4xl font-bold text-slate-800 mb-4">会員登録</h1>
+        <p class="text-lg text-slate-600 mb-12">
+            Relief のサービスをご利用いただくための会員登録です。登録後、伴走者のマッチングを開始します。
+        </p>
+
+        <!-- 登録フォーム -->
+        <div class="bg-white border border-slate-200 rounded-lg p-8 shadow-sm">
+            <form id="registration-form" class="space-y-6">
+                <!-- 保護者情報 -->
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">保護者情報</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="parent-name" class="block text-sm font-medium text-slate-700 mb-2">
+                                お名前 <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="parent-name" name="parent-name" required
+                                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="parent-kana" class="block text-sm font-medium text-slate-700 mb-2">
+                                フリガナ <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="parent-kana" name="parent-kana" required
+                                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="parent-email" class="block text-sm font-medium text-slate-700 mb-2">
+                                メールアドレス <span class="text-red-500">*</span>
+                            </label>
+                            <input type="email" id="parent-email" name="parent-email" required
+                                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="parent-phone" class="block text-sm font-medium text-slate-700 mb-2">
+                                電話番号 <span class="text-red-500">*</span>
+                            </label>
+                            <input type="tel" id="parent-phone" name="parent-phone" required
+                                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="parent-address" class="block text-sm font-medium text-slate-700 mb-2">
+                                住所 <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="parent-address" name="parent-address" required
+                                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="例: 東京都渋谷区代々木1-2-3">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 子ども情報 -->
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">お子様情報</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="child-name" class="block text-sm font-medium text-slate-700 mb-2">
+                                お子様のお名前 <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="child-name" name="child-name" required
+                                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="child-kana" class="block text-sm font-medium text-slate-700 mb-2">
+                                フリガナ <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="child-kana" name="child-kana" required
+                                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="child-birthday" class="block text-sm font-medium text-slate-700 mb-2">
+                                生年月日 <span class="text-red-500">*</span>
+                            </label>
+                            <input type="date" id="child-birthday" name="child-birthday" required
+                                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="child-grade" class="block text-sm font-medium text-slate-700 mb-2">
+                                学年
+                            </label>
+                            <select id="child-grade" name="child-grade"
+                                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">選択してください</option>
+                                <option value="preschool">未就学児</option>
+                                <option value="elementary">小学生</option>
+                                <option value="junior">中学生</option>
+                                <option value="high">高校生</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="child-school" class="block text-sm font-medium text-slate-700 mb-2">
+                                通学先（任意）
+                            </label>
+                            <input type="text" id="child-school" name="child-school"
+                                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="例: 渋谷小学校">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 支援希望 -->
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">支援希望</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="support-type" class="block text-sm font-medium text-slate-700 mb-2">
+                                希望する支援の種類 <span class="text-red-500">*</span>
+                            </label>
+                            <select id="support-type" name="support-type" required
+                                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">選択してください</option>
+                                <option value="learning">学習支援</option>
+                                <option value="counseling">心理カウンセリング</option>
+                                <option value="development">発達支援</option>
+                                <option value="career">進路相談</option>
+                                <option value="family">家族支援</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="support-details" class="block text-sm font-medium text-slate-700 mb-2">
+                                具体的な支援内容やお悩み <span class="text-red-500">*</span>
+                            </label>
+                            <textarea id="support-details" name="support-details" rows="4" required
+                                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="現在の状況やお困りごと、希望する支援内容を詳しくお書きください"></textarea>
+                        </div>
+                        <div>
+                            <label for="preferred-time" class="block text-sm font-medium text-slate-700 mb-2">
+                                希望する支援時間帯
+                            </label>
+                            <select id="preferred-time" name="preferred-time"
+                                class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">指定なし</option>
+                                <option value="morning">午前（9:00-12:00）</option>
+                                <option value="afternoon">午後（13:00-17:00）</option>
+                                <option value="evening">夕方（17:00-19:00）</option>
+                                <option value="weekend">土日祝日</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 利用規約同意 -->
+                <div>
+                    <div class="flex items-start gap-3">
+                        <input type="checkbox" id="agree-terms" name="agree-terms" required
+                            class="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-slate-300 rounded">
+                        <label for="agree-terms" class="text-sm text-slate-700">
+                            <a href="terms.html" class="text-blue-600 hover:underline">利用規約</a>、
+                            <a href="privacy.html" class="text-blue-600 hover:underline">プライバシーポリシー</a>に同意します <span class="text-red-500">*</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 送信ボタン -->
+                <div class="pt-4">
+                    <button type="submit"
+                        class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
+                        登録する
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- 注意事項 -->
+        <div class="mt-8 bg-slate-50 border border-slate-200 rounded-lg p-6">
+            <h3 class="text-lg font-bold text-slate-800 mb-4">ご注意ください</h3>
+            <ul class="space-y-2 text-slate-600 text-sm">
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">•</span>
+                    <span>登録後、1-3営業日以内に担当者より連絡いたします</span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">•</span>
+                    <span>初回面談は無料です。以降の支援については料金が発生します</span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">•</span>
+                    <span>入力いただいた情報は支援目的以外には使用しません</span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">•</span>
+                    <span>登録内容の変更やキャンセルはいつでも可能です</span>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script src="assets/script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registration-form');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // 基本的なバリデーション
+                const requiredFields = form.querySelectorAll('[required]');
+                let isValid = true;
+
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.classList.add('border-red-500');
+                        isValid = false;
+                    } else {
+                        field.classList.remove('border-red-500');
+                    }
+                });
+
+                if (!isValid) {
+                    alert('必須項目をすべて入力してください。');
+                    return;
+                }
+
+                // ここで実際の送信処理を行う
+                alert('登録が完了しました。担当者より連絡いたします。');
+                // form.reset();
+            });
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>莨壼藤逋ｻ骭ｲ - Relief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-700">
+    <div id="nav"></div>
+
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section class="space-y-8">
+            <div>
+                <h1 class="text-3xl font-bold text-slate-900 mb-4">莨壼藤逋ｻ骭ｲ</h1>
+                <p class="text-slate-700 leading-relaxed">
+                    Relief 縺ｮ繧ｵ繝ｼ繝薙せ繧偵＃蛻ｩ逕ｨ縺・◆縺縺上◆繧√∽ｻ･荳九・繝輔か繝ｼ繝縺ｫ蠢・ｦ√↑諠・ｱ繧偵＃蜈･蜉帙￥縺縺輔＞縲・
+                </p>
+                <p class="text-slate-700 leading-relaxed mt-4">
+                    逋ｻ骭ｲ縺・◆縺縺・◆諠・ｱ縺ｯ縲√・繝ｩ繧､繝舌す繝ｼ繝昴Μ繧ｷ繝ｼ縺ｫ蠕薙▲縺ｦ螳牙・縺ｫ邂｡逅・＞縺溘＠縺ｾ縺吶・
+                </p>
+            </div>
+
+            <!-- MS Forms 蝓九ａ霎ｼ縺ｿ -->
+            <div class="rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                <iframe
+                    src="https://forms.office.com/r/GiLQRUzE4H?embed=true"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0"
+                    style="width: 100%; height: 800px; border: none;"
+                    allowfullscreen
+                    webkitallowfullscreen
+                    mozallowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="bg-blue-50 rounded-lg p-6 border border-blue-200">
+                <h2 class="text-lg font-semibold text-slate-900 mb-3">縺皮匳骭ｲ縺ｫ髫帙＠縺ｦ</h2>
+                <ul class="space-y-2 text-sm text-slate-700">
+                    <li>繝ｻ逋ｻ骭ｲ蠕後∫｢ｺ隱阪Γ繝ｼ繝ｫ繧偵♀騾√ｊ縺励∪縺・/li>
+                    <li>繝ｻ縺皮匳骭ｲ縺・◆縺縺・◆諠・ｱ縺ｯ <a href="privacy.html" class="text-blue-600 hover:underline">繝励Λ繧､繝舌す繝ｼ繝昴Μ繧ｷ繝ｼ</a> 縺ｫ蠕薙▲縺ｦ邂｡逅・＆繧後∪縺・/li>
+                    <li>繝ｻ縺比ｸ肴・縺ｪ轤ｹ縺ｯ <a href="faq-contact.html" class="text-blue-600 hover:underline">縺雁撫縺・粋繧上○</a> 繧医ｊ縺秘｣邨｡縺上□縺輔＞</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="assets/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支援者一覧 - Relief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-700">
+    <!-- ナビゲーションバー -->
+    <div id="nav"></div>
+
+    <!-- メインコンテンツ -->
+    <main class="max-w-6xl mx-auto p-4 py-12">
+        <h1 class="text-4xl font-bold text-slate-800 mb-4">支援者一覧</h1>
+        <p class="text-lg text-slate-600 mb-12">
+            Relief と連携する支援事業者・パートナーをご紹介します。様々な分野の専門家が子どもたちの支援に取り組んでいます。
+        </p>
+
+        <!-- 支援者カテゴリ -->
+        <div class="mb-8">
+            <div class="flex flex-wrap gap-4">
+                <button class="category-btn px-4 py-2 bg-blue-600 text-white rounded-lg active" data-category="all">
+                    すべて
+                </button>
+                <button class="category-btn px-4 py-2 bg-slate-200 text-slate-700 rounded-lg hover:bg-slate-300 transition" data-category="education">
+                    教育機関
+                </button>
+                <button class="category-btn px-4 py-2 bg-slate-200 text-slate-700 rounded-lg hover:bg-slate-300 transition" data-category="medical">
+                    医療機関
+                </button>
+                <button class="category-btn px-4 py-2 bg-slate-200 text-slate-700 rounded-lg hover:bg-slate-300 transition" data-category="welfare">
+                    福祉施設
+                </button>
+                <button class="category-btn px-4 py-2 bg-slate-200 text-slate-700 rounded-lg hover:bg-slate-300 transition" data-category="consulting">
+                    コンサルティング
+                </button>
+            </div>
+        </div>
+
+        <!-- 所在地 -->
+        <div class="mb-8">
+            <h3 class="text-lg font-semibold text-slate-800 mb-4">所在地</h3>
+            <div class="flex flex-wrap gap-4">
+                <button class="location-btn px-4 py-2 bg-blue-600 text-white rounded-lg active" data-location="all">
+                    すべて
+                </button>
+                <button class="location-btn px-4 py-2 bg-slate-200 text-slate-700 rounded-lg hover:bg-slate-300 transition" data-location="神奈川県横浜市">
+                    神奈川県横浜市
+                </button>
+                <button class="location-btn px-4 py-2 bg-slate-200 text-slate-700 rounded-lg hover:bg-slate-300 transition" data-location="東京都品川区">
+                    東京都品川区
+                </button>
+            </div>
+        </div>
+
+        <!-- 支援者一覧 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="providers-grid">
+            <!-- 支援者カードはJavaScriptで動的に生成されます -->
+        </div>
+
+        <!-- 支援者になる -->
+        <div class="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">支援事業者として連携しませんか？</h3>
+            <p class="text-slate-600 mb-6">
+                Relief と連携して、より多くの子どもたちを支援しませんか？
+            </p>
+            <a href="provider-register.html" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold">
+                支援者登録
+            </a>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script src="assets/script.js" defer></script>
+    <script>
+        let allProviders = [];
+        let currentCategory = 'all';
+        let currentLocation = 'all';
+
+        // タイプからカテゴリを決定する関数
+        function getCategoryFromType(type) {
+            if (type.includes('フリースクール') || type.includes('教育')) {
+                return 'education';
+            } else if (type.includes('医療機関') || type.includes('クリニック')) {
+                return 'medical';
+            } else if (type.includes('放課後等デイサービス') || type.includes('訪問支援') || type.includes('福祉')) {
+                return 'welfare';
+            } else if (type.includes('オンライン支援') || type.includes('コンサルティング')) {
+                return 'consulting';
+            }
+            return 'consulting'; // デフォルト
+        }
+
+        // アイコンを取得する関数
+        function getIconForType(type) {
+            if (type.includes('フリースクール') || type.includes('教育')) {
+                return '🏫';
+            } else if (type.includes('医療機関') || type.includes('クリニック')) {
+                return '🏥';
+            } else if (type.includes('放課後等デイサービス') || type.includes('訪問支援')) {
+                return '🏠';
+            } else if (type.includes('オンライン支援')) {
+                return '💻';
+            }
+            return '💼'; // デフォルト
+        }
+
+        // 背景色を取得する関数
+        function getBgColorForCategory(category) {
+            const colors = {
+                education: 'bg-blue-100',
+                medical: 'bg-red-100',
+                welfare: 'bg-purple-100',
+                consulting: 'bg-green-100'
+            };
+            return colors[category] || 'bg-gray-100';
+        }
+
+        // 支援者カードを生成する関数
+        function createProviderCard(provider) {
+            const category = getCategoryFromType(provider.type);
+            const icon = getIconForType(provider.type);
+            const bgColor = getBgColorForCategory(category);
+            const address = `${provider.address.prefecture} ${provider.address.city}`;
+
+            return `
+                <div class="provider-card bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition" data-category="${category}">
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 ${bgColor} rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">${icon}</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800">${provider.name}</h3>
+                                <p class="text-slate-600">${provider.specialty}</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 mb-4">${provider.comment}</p>
+                        <div class="space-y-2 text-sm text-slate-600 mb-4">
+                            <p><strong>所在地:</strong> ${address}</p>
+                            <p><strong>対象年齢:</strong> ${provider.age_range}</p>
+                            <p><strong>料金:</strong> ${provider.pricing}</p>
+                            <p><strong>利用可能時間:</strong> ${provider.availability}</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="text-sm text-slate-600">
+                                <a href="${provider.url}" target="_blank" class="text-blue-600 hover:text-blue-800">詳細を見る →</a>
+                            </div>
+                            <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                連携中
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // 支援者を表示する関数
+        function displayProviders(providers, category = 'all', location = 'all') {
+            const grid = document.getElementById('providers-grid');
+            let filteredProviders = providers;
+
+            // カテゴリでフィルタリング
+            if (category !== 'all') {
+                filteredProviders = filteredProviders.filter(p => getCategoryFromType(p.type) === category);
+            }
+
+            // 所在地でフィルタリング（都道府県+市区町村）
+            if (location !== 'all') {
+                filteredProviders = filteredProviders.filter(p => {
+                    const fullAddress = `${p.address.prefecture}${p.address.city}`;
+                    return location === fullAddress;
+                });
+            }
+
+            grid.innerHTML = filteredProviders.map(createProviderCard).join('');
+        }
+
+        // JSONデータを読み込む関数
+        async function loadProviders() {
+            try {
+                const response = await fetch('data/providers.json');
+                allProviders = await response.json();
+                displayProviders(allProviders, currentCategory, currentLocation);
+            } catch (error) {
+                console.error('支援者データの読み込みに失敗しました:', error);
+                document.getElementById('providers-grid').innerHTML = '<p class="text-center text-slate-600">データの読み込みに失敗しました。</p>';
+            }
+        }
+
+        // 初期化
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProviders();
+
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const locationButtons = document.querySelectorAll('.location-btn');
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.classList.remove('bg-blue-600', 'text-white');
+                        btn.classList.add('bg-slate-200', 'text-slate-700');
+                    });
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    this.classList.remove('bg-slate-200', 'text-slate-700');
+                    this.classList.add('bg-blue-600', 'text-white');
+
+                    currentCategory = this.dataset.category;
+                    displayProviders(allProviders, currentCategory, currentLocation);
+                });
+            });
+
+            // 所在地ボタンのイベントリスナー
+            locationButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all location buttons
+                    locationButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.classList.remove('bg-blue-600', 'text-white');
+                        btn.classList.add('bg-slate-200', 'text-slate-700');
+                    });
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    this.classList.remove('bg-slate-200', 'text-slate-700');
+                    this.classList.add('bg-blue-600', 'text-white');
+
+                    currentLocation = this.dataset.location;
+                    displayProviders(allProviders, currentCategory, currentLocation);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

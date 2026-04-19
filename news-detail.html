@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ニュース詳細 - Relief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-700">
+    <!-- ナビゲーションバー -->
+    <div id="nav"></div>
+
+    <!-- メインコンテンツ -->
+    <main class="max-w-4xl mx-auto p-4 py-12">
+        <!-- パンくずリスト -->
+        <nav class="mb-8 text-sm text-slate-600">
+            <a href="index.html" class="hover:text-blue-600">ホーム</a>
+            <span class="mx-2">></span>
+            <a href="news.html" class="hover:text-blue-600">ニュース</a>
+            <span class="mx-2">></span>
+            <span>伴走者制度の開始について</span>
+        </nav>
+
+        <!-- 記事ヘッダー -->
+        <header class="mb-8">
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded">お知らせ</span>
+                <time class="text-sm text-slate-500" datetime="2024-06-01">2024年6月1日</time>
+            </div>
+            <h1 class="text-3xl font-bold text-slate-800 mb-4">伴走者制度の開始について</h1>
+            <div class="flex items-center text-sm text-slate-600">
+                <span>Relief編集部</span>
+            </div>
+        </header>
+
+        <!-- 記事本文 -->
+        <article class="prose prose-slate max-w-none">
+            <p class="text-lg text-slate-700 leading-relaxed mb-6">
+                特定非営利活動法人 Relief（以下「当法人」といいます）は、2024年6月1日より、新たな伴走者制度を開始いたします。
+                この制度は、メンタルヘルスに関する悩みを抱える方々が、専門的な支援を受けられるよう、経験豊富な伴走者をマッチングするサービスです。
+            </p>
+
+            <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">制度の概要</h2>
+            <p class="text-slate-700 leading-relaxed mb-4">
+                伴走者制度は、以下の特徴を持つサービスです：
+            </p>
+            <ul class="list-disc list-inside text-slate-700 leading-relaxed mb-6 space-y-2">
+                <li>臨床心理士、キャリアカウンセラーなどの専門家が伴走者として登録</li>
+                <li>オンライン相談を中心に、利用者のニーズに合わせた支援を提供</li>
+                <li>初回相談は無料で、継続支援の場合は月額制を採用</li>
+                <li>うつ病、不安障害、キャリア悩み、人間関係など多様な分野に対応</li>
+            </ul>
+
+            <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">利用方法</h2>
+            <ol class="list-decimal list-inside text-slate-700 leading-relaxed mb-6 space-y-2">
+                <li>当ウェブサイトから伴走者を検索・選択</li>
+                <li>希望の日時を予約（オンライン相談のみ）</li>
+                <li>初回相談（30分無料）を実施</li>
+                <li>継続支援を希望する場合、月額プランを選択</li>
+            </ol>
+
+            <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">料金体系</h2>
+            <div class="bg-slate-50 p-6 rounded-lg mb-6">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-slate-300">
+                            <th class="text-left py-2 font-semibold text-slate-800">プラン</th>
+                            <th class="text-left py-2 font-semibold text-slate-800">内容</th>
+                            <th class="text-left py-2 font-semibold text-slate-800">料金</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-slate-200">
+                            <td class="py-3 text-slate-700">初回相談</td>
+                            <td class="py-3 text-slate-700">30分無料相談</td>
+                            <td class="py-3 text-slate-700">無料</td>
+                        </tr>
+                        <tr class="border-b border-slate-200">
+                            <td class="py-3 text-slate-700">ライトプラン</td>
+                            <td class="py-3 text-slate-700">月2回（各50分）</td>
+                            <td class="py-3 text-slate-700">8,000円/月</td>
+                        </tr>
+                        <tr class="border-b border-slate-200">
+                            <td class="py-3 text-slate-700">スタンダードプラン</td>
+                            <td class="py-3 text-slate-700">月4回（各50分）</td>
+                            <td class="py-3 text-slate-700">15,000円/月</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 text-slate-700">プレミアムプラン</td>
+                            <td class="py-3 text-slate-700">月8回（各50分）+ メール相談</td>
+                            <td class="py-3 text-slate-700">25,000円/月</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">伴走者の登録について</h2>
+            <p class="text-slate-700 leading-relaxed mb-4">
+                現在、伴走者パートナーの登録を募集しております。臨床心理士、キャリアカウンセラー、産業カウンセラーなどの資格をお持ちの方、
+                または同等の経験をお持ちの方のご参加をお待ちしております。
+            </p>
+            <p class="text-slate-700 leading-relaxed mb-6">
+                伴走者登録をご希望の方は、<a href="mentor-register.html" class="text-blue-600 hover:text-blue-800 underline">伴走者登録ページ</a>よりお申し込みください。
+            </p>
+
+            <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">今後の展開</h2>
+            <p class="text-slate-700 leading-relaxed mb-4">
+                当法人は、今後も伴走者制度の充実を図り、より多くの皆様のメンタルヘルス支援に貢献してまいります。
+                制度開始後も、利用者の皆様からのフィードバックを積極的に取り入れ、サービスの改善に努めてまいります。
+            </p>
+
+            <div class="bg-blue-50 p-6 rounded-lg mt-8">
+                <h3 class="text-lg font-semibold text-blue-800 mb-2">お問い合わせ</h3>
+                <p class="text-blue-700 mb-4">
+                    伴走者制度に関するご質問やご相談は、以下の連絡先までお問い合わせください。
+                </p>
+                <div class="text-sm text-blue-700">
+                    <p><strong>メール:</strong> info@relief.jp</p>
+                    <p><strong>電話:</strong> 03-XXXX-XXXX</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- 関連記事 -->
+        <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-xl font-bold text-slate-800 mb-6">関連記事</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <article class="border border-slate-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <h3 class="font-semibold text-slate-800 mb-2">
+                        <a href="news-detail.html?id=2" class="hover:text-blue-600 transition-colors">支援事業者パートナー募集開始</a>
+                    </h3>
+                    <p class="text-sm text-slate-600 mb-2">
+                        Reliefでは、伴走者制度をより充実させるため、支援事業者のパートナーを募集いたします。
+                    </p>
+                    <time class="text-xs text-slate-500" datetime="2024-05-15">2024年5月15日</time>
+                </article>
+
+                <article class="border border-slate-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <h3 class="font-semibold text-slate-800 mb-2">
+                        <a href="news-detail.html?id=3" class="hover:text-blue-600 transition-colors">第1回オンライン相談会開催のお知らせ</a>
+                    </h3>
+                    <p class="text-sm text-slate-600 mb-2">
+                        6月15日に第1回オンライン相談会を開催いたします。Reliefのサービスについてのご質問をお受けします。
+                    </p>
+                    <time class="text-xs text-slate-500" datetime="2024-05-10">2024年5月10日</time>
+                </article>
+            </div>
+        </section>
+
+        <!-- 戻るボタン -->
+        <div class="mt-8 text-center">
+            <a href="news.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 transition-colors">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                ニュース一覧に戻る
+            </a>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script src="assets/script.js" defer></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>譁ｰ縺励＞莨ｴ襍ｰ閠・′3蜷榊刈蜈･縺励∪縺励◆・・- Relief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-700">
+    <!-- 繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ繝舌・ -->
+    <div id="nav"></div>
+
+    <!-- 繝｡繧､繝ｳ繧ｳ繝ｳ繝・Φ繝・-->
+    <main class="max-w-3xl mx-auto p-4 py-12">
+        <!-- 險倅ｺ九・繝・ム繝ｼ -->
+        <div class="mb-8">
+            <div class="flex gap-2 mb-4">
+                <span class="inline-block px-3 py-1 bg-red-100 text-red-700 text-sm font-semibold rounded">譁ｰ逹</span>
+                <span class="text-sm text-slate-500">2026蟷ｴ4譛・5譌･</span>
+            </div>
+            <h1 class="text-4xl font-bold text-slate-800 mb-4">譁ｰ縺励＞莨ｴ襍ｰ閠・′3蜷榊刈蜈･縺励∪縺励◆・・/h1>
+            <p class="text-lg text-slate-600">Relief 縺ｮ繝√・繝縺梧峩縺ｫ蜈・ｮ溘＠縺ｾ縺励◆縲よ眠縺励＞莨ｴ襍ｰ閠・ｒ縺皮ｴｹ莉九＠縺ｾ縺吶・/p>
+        </div>
+
+        <!-- 險倅ｺ狗判蜒・-->
+        <div class="w-full h-80 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg mb-8 flex items-center justify-center">
+            <div class="text-center text-white">
+                <svg class="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 12H9m6 0a6 6 0 11-12 0 6 6 0 0112 0z"></path>
+                </svg>
+                <p class="text-xl font-semibold">譁ｰ縺励＞繝√・繝繝｡繝ｳ繝舌・</p>
+            </div>
+        </div>
+
+        <!-- 險倅ｺ区悽譁・-->
+        <article class="mb-12 text-slate-700 leading-relaxed space-y-6">
+            <p>
+                縺薙・蠎ｦ縲ヽelief 縺ｮ繝√・繝縺ｫ譁ｰ縺励￥3蜷阪・莨ｴ襍ｰ閠・′蜉蜈･縺・◆縺励∪縺励◆縲ゅメ繝ｼ繝縺ｮ諡｡螟ｧ縺ｫ繧医ｊ縲√ｈ繧雁､壹￥縺ｮ縺雁ｭ舌＆繧薙→縺泌ｮｶ譌上ｒ繧ｵ繝昴・繝医〒縺阪ｋ繧医≧縺ｫ縺ｪ繧翫∪縺吶・
+            </p>
+
+            <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">譁ｰ縺励＞莨ｴ襍ｰ閠・・縺皮ｴｹ莉・/h2>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">騾ｲ霍ｯ謾ｯ謠ｴ蟆る摩・夐斡譛ｨ 螟ｪ驛弱＆繧・/h3>
+                <p class="text-sm text-slate-600 mb-3">蜈・・遶矩ｫ俶｡繧ｭ繝｣繝ｪ繧｢繧ｫ繧ｦ繝ｳ繧ｻ繝ｩ繝ｼ | 20蟷ｴ縺ｮ謨呵ご邨碁ｨ・/p>
+                <p>
+                    鬮伜穀隱榊ｮ夊ｩｦ鬨薙・蟇ｾ遲悶∝ｮ壽凾蛻ｶ繝ｻ騾壻ｿ｡蛻ｶ鬮俶｡縺ｸ縺ｮ騾ｲ蟄ｦ逶ｸ隲・ｒ蟆る摩縺ｨ縺励※縺・∪縺吶ゆｸ咲匳譬｡繧堤ｵ碁ｨ薙＠縺溽函蠕偵・騾ｲ蟄ｦ繧偵し繝昴・繝医＠縺溷ｮ溽ｸｾ縺瑚ｱ雁ｯ後〒縺吶・
+                </p>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">逋ｺ驕疲髪謠ｴ蟆る摩・壼ｰ乗棊 鄒主━縺輔ｓ</h3>
+                <p class="text-sm text-slate-600 mb-3">閾ｨ蠎顔匱驕泌ｿ・炊螢ｫ | ASD/ADHD蟆る摩</p>
+                <p>
+                    逋ｺ驕秘囿螳ｳ縺ｮ縺ゅｋ縺雁ｭ舌＆繧薙∈縺ｮ謾ｯ謠ｴ繧貞ｰる摩縺ｨ縺励※縺・∪縺吶ょｼｷ縺ｿ繧呈ｴｻ縺九＠縲∬・菫｡繧貞叙繧頑綾縺吶♀謇倶ｼ昴＞繧偵＠縺ｾ縺吶りｦｪ謾ｯ謠ｴ繧る㍾隕悶・
+                </p>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">蟄ｦ鄙呈髪謠ｴ蟆る摩・壼刈阯､ 蛛･荳縺輔ｓ</h3>
+                <p class="text-sm text-slate-600 mb-3">蝪ｾ邨悟霧閠・| 5000蜷堺ｻ･荳翫・蟄ｦ鄙呈欠蟆守ｵ碁ｨ・/p>
+                <p>
+                    闍ｦ謇九↑謨咏ｧ代・蜈区恪縺ｨ蟄ｦ鄙堤ｿ呈・縺ｮ遒ｺ遶九ｒ蠕玲э縺ｨ縺励※縺・∪縺吶よ･ｽ縺励＞蟄ｦ縺ｳ繧帝壹§縺ｦ縲∝ｭ舌←繧よ悽譚･縺ｮ蟄ｦ鄙呈э谺ｲ繧貞ｼ輔″蜃ｺ縺励∪縺吶・
+                </p>
+            </div>
+
+            <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">繝√・繝諡｡螟ｧ縺ｮ閭梧勹</h2>
+
+            <p>
+                Relief 縺ｮ蛻ｩ逕ｨ閠・焚縺碁・ｪｿ縺ｫ蠅怜刈縺吶ｋ縺ｪ縺九√ｈ繧雁､壹￥縺ｮ縺雁ｭ舌＆繧薙→縺泌ｮｶ譌上↓繧ｵ繝昴・繝医ｒ謠蝉ｾ帙＠縺溘＞縺ｨ縺・≧諤昴＞縺九ｉ縲∽ｻ雁屓縺ｮ繝√・繝諡｡螟ｧ繧呈ｱｺ螳壹＞縺溘＠縺ｾ縺励◆縲・
+            </p>
+
+            <p>
+                蜷・ｼｴ襍ｰ閠・・ Relief 縺ｮ髱｢謗･繝ｻ遐比ｿｮ繧堤ｵ後※縲∬ｪ榊ｮ壹＆繧後∪縺励◆縲３elief 縺ｮ逅・ｿｵ縺ｧ縺ゅｋ縲後・縺ｨ繧翫§繧・↑縺・∽ｸ邱偵↓豁ｩ繧ゅ≧縲阪ｒ菴鍋樟縺ｧ縺阪ｋ蟆る摩螳ｶ縺ｰ縺九ｊ縺ｧ縺吶・
+            </p>
+
+            <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">譁ｰ縺励＞莨ｴ襍ｰ閠・↓逶ｸ隲・☆繧・/h2>
+
+            <p>
+                譁ｰ縺励＞莨ｴ襍ｰ閠・・隧ｳ縺励＞繝励Ο繝輔ぅ繝ｼ繝ｫ縺ｯ縲・a href="mentors.html" class="text-blue-600 hover:underline">莨ｴ襍ｰ閠・ｸ隕ｧ繝壹・繧ｸ</a>縺九ｉ縺碑ｦｧ縺・◆縺縺代∪縺吶ら嶌隲・・螳ｹ縺ｫ蜷医ｏ縺帙※縲√・縺｣縺溘ｊ縺ｪ莨ｴ襍ｰ閠・ｒ縺企∈縺ｳ縺上□縺輔＞縲・
+            </p>
+
+            <p>
+                縲後％縺ｮ莨ｴ襍ｰ閠・↓逶ｸ隲・＠縺溘＞縲阪→縺・≧譁ｹ縺ｯ縲・a href="faq-contact.html" class="text-blue-600 hover:underline">縺雁撫縺・粋繧上○繝輔か繝ｼ繝</a>縺九ｉ縺頑ｰ苓ｻｽ縺ｫ縺秘｣邨｡縺上□縺輔＞縲・
+            </p>
+        </article>
+
+        <!-- 谺｡縺ｮ隱ｭ縺ｿ迚ｩ -->
+        <div class="bg-blue-50 border-t-4 border-blue-600 p-6 rounded mb-12">
+            <h3 class="text-lg font-bold text-slate-800 mb-4">髢｢騾｣險倅ｺ・/h3>
+            <ul class="space-y-3">
+                <li>
+                    <a href="news-detail.html?id=2" class="text-blue-600 hover:underline font-semibold">
+                        竊・5譛磯幕蛯ｬ・壻ｸ咲匳譬｡繝ｻ逋ｺ驕疲髪謠ｴ縺ｫ髢｢縺吶ｋ繧ｻ繝溘リ繝ｼ
+                    </a>
+                </li>
+                <li>
+                    <a href="mentors.html" class="text-blue-600 hover:underline font-semibold">
+                        竊・莨ｴ襍ｰ閠・ｸ隕ｧ繧定ｦ九ｋ
+                    </a>
+                </li>
+                <li>
+                    <a href="flow.html" class="text-blue-600 hover:underline font-semibold">
+                        竊・逶ｸ隲・・豬√ｌ繧堤｢ｺ隱阪☆繧・
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 繧ｷ繧ｧ繧｢繝懊ち繝ｳ -->
+        <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 mb-12">
+            <h3 class="font-bold text-slate-800 mb-4">縺薙・繝九Η繝ｼ繧ｹ繧偵す繧ｧ繧｢</h3>
+            <div class="flex flex-wrap gap-3">
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                    Facebook
+                </button>
+                <button class="px-4 py-2 bg-sky-400 text-white rounded-lg hover:bg-sky-500 transition">
+                    Twitter
+                </button>
+                <button class="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-800 transition">
+                    LINE
+                </button>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-4">縺ｾ縺壹・逶ｸ隲・＠縺ｦ縺ｿ縺ｾ縺励ｇ縺・/h3>
+            <p class="mb-6 text-blue-100">
+                Relief 縺ｮ莨ｴ襍ｰ閠・′縺ゅ↑縺溘・迥ｶ豕√↓蜷医ｏ縺帙※縲∝句挨縺ｫ繧ｵ繝昴・繝医＠縺ｾ縺吶・
+            </p>
+            <a href="faq-contact.html" class="inline-block px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition">
+                逶ｸ隲・ヵ繧ｩ繝ｼ繝縺ｸ
+            </a>
+        </div>
+
+        <!-- 險倅ｺ九ヵ繝・ち繝ｼ -->
+        <div class="mt-12 pt-8 border-t border-slate-200">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <div class="mb-4 sm:mb-0">
+                    <p class="text-sm text-slate-500 mb-1">謗ｲ霈画律・・026蟷ｴ4譛・5譌･</p>
+                    <p class="text-sm text-slate-500">繧ｫ繝・ざ繝ｪ・・span class="text-blue-600">縺顔衍繧峨○</span></p>
+                </div>
+                <a href="news.html" class="text-blue-600 hover:underline font-semibold">
+                    竊・繝九Η繝ｼ繧ｹ荳隕ｧ縺ｸ謌ｻ繧・
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 繝輔ャ繧ｿ繝ｼ -->
+    <div id="footer"></div>
+
+    <script src="/assets/script.js"></script>
+</body>
+</html>

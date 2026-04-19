@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記事・コラム - Relief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-700">
+    <!-- ナビゲーションバー -->
+    <div id="nav"></div>
+
+    <!-- メインコンテンツ -->
+    <main class="max-w-4xl mx-auto p-4 py-12">
+        <h1 class="text-4xl font-bold text-slate-800 mb-4">記事・コラム</h1>
+        <p class="text-lg text-slate-600 mb-8">メンタルヘルスや支援に関する記事やコラムをご紹介します。</p>
+
+        <!-- カテゴリフィルター -->
+        <div class="mb-8">
+            <div class="flex flex-wrap gap-2">
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-colors filter-btn active" data-category="all">
+                    すべて
+                </button>
+                <button class="px-4 py-2 bg-slate-200 text-slate-700 rounded-full text-sm font-medium hover:bg-slate-300 transition-colors filter-btn" data-category="mental-health">
+                    メンタルヘルス
+                </button>
+                <button class="px-4 py-2 bg-slate-200 text-slate-700 rounded-full text-sm font-medium hover:bg-slate-300 transition-colors filter-btn" data-category="support">
+                    支援制度
+                </button>
+                <button class="px-4 py-2 bg-slate-200 text-slate-700 rounded-full text-sm font-medium hover:bg-slate-300 transition-colors filter-btn" data-category="experience">
+                    体験談
+                </button>
+                <button class="px-4 py-2 bg-slate-200 text-slate-700 rounded-full text-sm font-medium hover:bg-slate-300 transition-colors filter-btn" data-category="tips">
+                    生活のコツ
+                </button>
+            </div>
+        </div>
+
+        <!-- 記事一覧 -->
+        <div class="space-y-6" id="articles-list">
+            <!-- 記事1 -->
+            <article class="border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow article-item" data-category="mental-health">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop" alt="メンタルヘルスの記事" class="w-full h-48 object-cover rounded-lg">
+                    </div>
+                    <div class="md:w-2/3">
+                        <div class="flex items-center mb-2">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">メンタルヘルス</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-800 mb-2">
+                            <a href="#" class="hover:text-blue-600 transition-colors">ストレス社会を生き抜くための心のケア方法</a>
+                        </h2>
+                        <p class="text-slate-600 mb-3">
+                            現代社会では誰もがストレスを感じる時代です。この記事では、日常的に取り入れられる心のケア方法について詳しく解説します。
+                        </p>
+                        <div class="flex items-center text-sm text-slate-500">
+                            <time datetime="2024-05-20">2024年5月20日</time>
+                            <span class="mx-2">•</span>
+                            <span>Relief編集部</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 記事2 -->
+            <article class="border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow article-item" data-category="support">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400&h=250&fit=crop" alt="支援制度の記事" class="w-full h-48 object-cover rounded-lg">
+                    </div>
+                    <div class="md:w-2/3">
+                        <div class="flex items-center mb-2">
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded">支援制度</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-800 mb-2">
+                            <a href="#" class="hover:text-blue-600 transition-colors">公的支援制度の活用方法</a>
+                        </h2>
+                        <p class="text-slate-600 mb-3">
+                            メンタルヘルスに関する公的支援制度について、利用方法や申請手続きをわかりやすく解説します。
+                        </p>
+                        <div class="flex items-center text-sm text-slate-500">
+                            <time datetime="2024-05-15">2024年5月15日</time>
+                            <span class="mx-2">•</span>
+                            <span>専門家監修</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 記事3 -->
+            <article class="border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow article-item" data-category="experience">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=250&fit=crop" alt="体験談の記事" class="w-full h-48 object-cover rounded-lg">
+                    </div>
+                    <div class="md:w-2/3">
+                        <div class="flex items-center mb-2">
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded">体験談</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-800 mb-2">
+                            <a href="#" class="hover:text-blue-600 transition-colors">伴走者との出会いがくれた変化</a>
+                        </h2>
+                        <p class="text-slate-600 mb-3">
+                            実際にReliefの伴走者制度を利用された方の体験談です。どのように支援が役立ったのかをお聞きしました。
+                        </p>
+                        <div class="flex items-center text-sm text-slate-500">
+                            <time datetime="2024-05-10">2024年5月10日</time>
+                            <span class="mx-2">•</span>
+                            <span>利用者様</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 記事4 -->
+            <article class="border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow article-item" data-category="tips">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop" alt="生活のコツの記事" class="w-full h-48 object-cover rounded-lg">
+                    </div>
+                    <div class="md:w-2/3">
+                        <div class="flex items-center mb-2">
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded">生活のコツ</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-800 mb-2">
+                            <a href="#" class="hover:text-blue-600 transition-colors">毎日の小さな習慣で心の健康を保つ</a>
+                        </h2>
+                        <p class="text-slate-600 mb-3">
+                            特別なことをしなくても、毎日の小さな習慣の積み重ねで心の健康を維持することができます。実践的なTipsをご紹介します。
+                        </p>
+                        <div class="flex items-center text-sm text-slate-500">
+                            <time datetime="2024-05-05">2024年5月5日</time>
+                            <span class="mx-2">•</span>
+                            <span>Relief編集部</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 記事5 -->
+            <article class="border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow article-item" data-category="mental-health">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=250&fit=crop" alt="メンタルヘルスの記事" class="w-full h-48 object-cover rounded-lg">
+                    </div>
+                    <div class="md:w-2/3">
+                        <div class="flex items-center mb-2">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">メンタルヘルス</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-800 mb-2">
+                            <a href="#" class="hover:text-blue-600 transition-colors">睡眠と心の健康の関係</a>
+                        </h2>
+                        <p class="text-slate-600 mb-3">
+                            質の良い睡眠が心の健康に与える影響について、科学的な根拠とともに解説します。睡眠改善のための具体的な方法もご紹介します。
+                        </p>
+                        <div class="flex items-center text-sm text-slate-500">
+                            <time datetime="2024-04-28">2024年4月28日</time>
+                            <span class="mx-2">•</span>
+                            <span>医師監修</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 記事6 -->
+            <article class="border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow article-item" data-category="support">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop" alt="支援制度の記事" class="w-full h-48 object-cover rounded-lg">
+                    </div>
+                    <div class="md:w-2/3">
+                        <div class="flex items-center mb-2">
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded">支援制度</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-800 mb-2">
+                            <a href="#" class="hover:text-blue-600 transition-colors">企業におけるメンタルヘルス対策</a>
+                        </h2>
+                        <p class="text-slate-600 mb-3">
+                            企業が従業員のメンタルヘルスをサポートするための制度や取り組みについて解説します。中小企業でも導入可能な方法をご紹介します。
+                        </p>
+                        <div class="flex items-center text-sm text-slate-500">
+                            <time datetime="2024-04-20">2024年4月20日</time>
+                            <span class="mx-2">•</span>
+                            <span>企業コンサルタント</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- もっと見るボタン -->
+        <div class="mt-12 text-center">
+            <button class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                もっと見る
+            </button>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script src="assets/script.js" defer></script>
+    <script>
+        // カテゴリフィルター機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const articles = document.querySelectorAll('.article-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+
+                    // ボタンのアクティブ状態を更新
+                    filterButtons.forEach(btn => btn.classList.remove('active', 'bg-blue-600', 'text-white'));
+                    filterButtons.forEach(btn => btn.classList.add('bg-slate-200', 'text-slate-700'));
+                    this.classList.add('active', 'bg-blue-600', 'text-white');
+                    this.classList.remove('bg-slate-200', 'text-slate-700');
+
+                    // 記事の表示/非表示
+                    articles.forEach(article => {
+                        if (category === 'all' || article.getAttribute('data-category') === category) {
+                            article.style.display = 'block';
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

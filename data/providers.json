@@ -1,0 +1,182 @@
+[
+  {
+    "id": "001",
+    "name": "よこはまフリースクール青空",
+    "type": "フリースクール",
+    "address": {
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "street": "港北区大倉山3-12-5"
+    },
+    "url": "https://example.com/aozora",
+    "phone": "045-111-2222",
+    "specialty": "不登校支援・居場所づくり",
+    "comment": "小中学生を対象にした少人数制のフリースクールです。学習支援と居場所づくりを中心に活動しています。",
+    "availability": "平日 10:00〜16:00",
+    "age_range": "小学生〜中学生",
+    "pricing": "月額 25,000円〜",
+    "image": "images/001.jpeg"
+  },
+  {
+    "id": "002",
+    "name": "みなとみらい子どもクリニック",
+    "type": "医療機関（小児科・発達外来）",
+    "address": {
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "street": "西区みなとみらい4-7-1"
+    },
+    "url": "https://example.com/mmclinic",
+    "phone": "045-222-3333",
+    "specialty": "発達相談・メンタルケア",
+    "comment": "発達特性や不登校に関する医療的な相談を受け付けています。保護者向けのカウンセリングも実施。",
+    "availability": "平日・土曜",
+    "age_range": "幼児〜高校生",
+    "pricing": "医療保険適用",
+    "image": "images/002.jpeg"
+  },
+  {
+    "id": "003",
+    "name": "放課後等デイサービス はまっ子サポート",
+    "type": "放課後等デイサービス",
+    "address": {
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "street": "都筑区中川中央1-5-10"
+    },
+    "url": "https://example.com/hamakko",
+    "phone": "045-333-4444",
+    "specialty": "発達障害・ソーシャルスキルトレーニング",
+    "comment": "小学生〜高校生まで幅広く対応。SSTや学習支援を中心に、個別支援計画に基づいたサポートを行います。",
+    "availability": "平日放課後・土曜",
+    "age_range": "小学生〜高校生",
+    "pricing": "受給者証に基づく利用料",
+    "image": "images/003.jpeg"
+  },
+  {
+    "id": "004",
+    "name": "よこはま家庭訪問支援センター",
+    "type": "訪問支援",
+    "address": {
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "street": "鶴見区鶴見中央2-8-4"
+    },
+    "url": "https://example.com/homevisit",
+    "phone": "045-444-5555",
+    "specialty": "家庭訪問・生活リズム改善",
+    "comment": "外出が難しいお子さんやご家庭に対して、訪問型の相談支援を行っています。",
+    "availability": "平日 13:00〜19:00",
+    "age_range": "小学生〜高校生",
+    "pricing": "1回 5,000円〜",
+    "image": "images/004.jpeg"
+  },
+  {
+    "id": "005",
+    "name": "オンライン親の会 はまっこ",
+    "type": "オンライン支援",
+    "address": {
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "street": "中区本町6-50-1"
+    },
+    "url": "https://example.com/oyanokai",
+    "phone": "050-1234-5678",
+    "specialty": "保護者支援・ピアサポート",
+    "comment": "横浜市の保護者を中心に、オンラインでのピアサポートを提供しています。",
+    "availability": "夜間・土日",
+    "age_range": "保護者向け",
+    "pricing": "参加費 500円〜",
+    "image": "images/005.jpeg"
+  },
+  {
+    "id": "006",
+    "name": "しながわフリースクール太陽",
+    "type": "フリースクール",
+    "address": {
+      "prefecture": "東京都",
+      "city": "品川区",
+      "street": "大崎1-2-3"
+    },
+    "url": "https://example.com/taiyo",
+    "phone": "03-1111-2222",
+    "specialty": "不登校支援・学習支援",
+    "comment": "品川区の小中学生を対象にしたフリースクールです。個別学習支援とグループ活動を行っています。",
+    "availability": "平日 9:00〜15:00",
+    "age_range": "小学生〜中学生",
+    "pricing": "月額 30,000円〜",
+    "image": "images/006.jpeg"
+  },
+  {
+    "id": "007",
+    "name": "品川子どもメンタルクリニック",
+    "type": "医療機関（小児精神科）",
+    "address": {
+      "prefecture": "東京都",
+      "city": "品川区",
+      "street": "五反田2-4-5"
+    },
+    "url": "https://example.com/shinagawa-clinic",
+    "phone": "03-2222-3333",
+    "specialty": "発達障害・不登校相談",
+    "comment": "品川区近隣の子どもたちの発達・メンタルヘルスに関する相談と治療を行っています。",
+    "availability": "平日・土曜",
+    "age_range": "幼児〜高校生",
+    "pricing": "医療保険適用",
+    "image": "images/007.jpeg"
+  },
+  {
+    "id": "008",
+    "name": "放課後等デイサービス しながわスマイル",
+    "type": "放課後等デイサービス",
+    "address": {
+      "prefecture": "東京都",
+      "city": "品川区",
+      "street": "荏原3-6-7"
+    },
+    "url": "https://example.com/shinagawa-smile",
+    "phone": "03-3333-4444",
+    "specialty": "発達支援・SST",
+    "comment": "品川区の小学生〜高校生を対象に、ソーシャルスキルトレーニングを中心とした支援を提供します。",
+    "availability": "平日放課後・土曜",
+    "age_range": "小学生〜高校生",
+    "pricing": "受給者証に基づく利用料",
+    "image": "images/008.jpeg"
+  },
+  {
+    "id": "009",
+    "name": "品川家庭支援サービス",
+    "type": "訪問支援",
+    "address": {
+      "prefecture": "東京都",
+      "city": "品川区",
+      "street": "西五反田4-8-9"
+    },
+    "url": "https://example.com/shinagawa-home",
+    "phone": "03-4444-5555",
+    "specialty": "家庭訪問・生活支援",
+    "comment": "品川区内のご家庭を訪問し、不登校や発達に関する相談・支援を行っています。",
+    "availability": "平日 14:00〜20:00",
+    "age_range": "小学生〜高校生",
+    "pricing": "1回 6,000円〜",
+    "image": "images/009.jpeg"
+  },
+  {
+    "id": "010",
+    "name": "オンライン保護者コミュニティ しながわ",
+    "type": "オンライン支援",
+    "address": {
+      "prefecture": "東京都",
+      "city": "品川区",
+      "street": "東五反田5-10-11"
+    },
+    "url": "https://example.com/shinagawa-online",
+    "phone": "050-9876-5432",
+    "specialty": "保護者支援・情報交換",
+    "comment": "品川区の保護者向けオンラインコミュニティ。経験共有と情報提供を行っています。",
+    "availability": "夜間・土日",
+    "age_range": "保護者向け",
+    "pricing": "参加費 600円〜",
+    "image": "images/010.jpeg"
+  }
+]

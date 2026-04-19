@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伴走者一覧 - Relief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-700">
+    <!-- ナビゲーションバー -->
+    <div id="nav"></div>
+
+    <!-- メインコンテンツ -->
+    <main class="max-w-6xl mx-auto p-4 py-12">
+        <h1 class="text-4xl font-bold text-slate-800 mb-4">伴走者一覧</h1>
+        <p class="text-lg text-slate-600 mb-12">
+            Relief の伴走者をご紹介します。各専門家が子どもたちの成長をサポートします。
+        </p>
+
+        <!-- フィルター -->
+        <div class="mb-8">
+            <div class="flex flex-wrap gap-4">
+                <button class="filter-btn px-4 py-2 bg-blue-600 text-white rounded-lg active" data-filter="all">
+                    すべて
+                </button>
+                <button class="filter-btn px-4 py-2 bg-slate-200 text-slate-700 rounded-lg hover:bg-slate-300 transition" data-filter="education">
+                    教育支援
+                </button>
+                <button class="filter-btn px-4 py-2 bg-slate-200 text-slate-700 rounded-lg hover:bg-slate-300 transition" data-filter="psychology">
+                    心理カウンセリング
+                </button>
+                <button class="filter-btn px-4 py-2 bg-slate-200 text-slate-700 rounded-lg hover:bg-slate-300 transition" data-filter="development">
+                    発達支援
+                </button>
+                <button class="filter-btn px-4 py-2 bg-slate-200 text-slate-700 rounded-lg hover:bg-slate-300 transition" data-filter="social-work">
+                    ソーシャルワーク
+                </button>
+            </div>
+        </div>
+
+        <!-- 伴走者一覧 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="mentors-grid">
+            <!-- 伴走者1 -->
+            <div class="mentor-card bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition" data-specialty="education">
+                <div class="p-6">
+                    <div class="w-20 h-20 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold text-slate-600">
+                        山田
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 text-center mb-2">山田太郎</h3>
+                    <p class="text-slate-600 text-center mb-4">教育支援専門家</p>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <p><strong>専門分野:</strong> 学習支援、進路相談</p>
+                        <p><strong>経験年数:</strong> 8年</p>
+                        <p><strong>資格:</strong> 学習支援員、キャリアカウンセラー</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="mentor-detail.html?id=1" class="block text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                            詳細を見る
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 伴走者2 -->
+            <div class="mentor-card bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition" data-specialty="psychology">
+                <div class="p-6">
+                    <div class="w-20 h-20 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold text-slate-600">
+                        佐藤
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 text-center mb-2">佐藤花子</h3>
+                    <p class="text-slate-600 text-center mb-4">心理カウンセラー</p>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <p><strong>専門分野:</strong> メンタルヘルス、不安障害</p>
+                        <p><strong>経験年数:</strong> 12年</p>
+                        <p><strong>資格:</strong> 臨床心理士、公認心理師</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="mentor-detail.html?id=2" class="block text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                            詳細を見る
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 伴走者3 -->
+            <div class="mentor-card bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition" data-specialty="development">
+                <div class="p-6">
+                    <div class="w-20 h-20 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold text-slate-600">
+                        鈴木
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 text-center mb-2">鈴木一郎</h3>
+                    <p class="text-slate-600 text-center mb-4">発達支援専門家</p>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <p><strong>専門分野:</strong> ADHD、ASD、自閉症スペクトラム</p>
+                        <p><strong>経験年数:</strong> 10年</p>
+                        <p><strong>資格:</strong> 特別支援教育士、行動療法士</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="mentor-detail.html?id=3" class="block text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                            詳細を見る
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 伴走者4 -->
+            <div class="mentor-card bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition" data-specialty="social-work">
+                <div class="p-6">
+                    <div class="w-20 h-20 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold text-slate-600">
+                        高橋
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 text-center mb-2">高橋美咲</h3>
+                    <p class="text-slate-600 text-center mb-4">ソーシャルワーカー</p>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <p><strong>専門分野:</strong> 家族支援、資源活用</p>
+                        <p><strong>経験年数:</strong> 15年</p>
+                        <p><strong>資格:</strong> 社会福祉士、ケースワーカー</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="mentor-detail.html?id=4" class="block text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                            詳細を見る
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 伴走者5 -->
+            <div class="mentor-card bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition" data-specialty="education">
+                <div class="p-6">
+                    <div class="w-20 h-20 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold text-slate-600">
+                        中村
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 text-center mb-2">中村健太</h3>
+                    <p class="text-slate-600 text-center mb-4">教育支援専門家</p>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <p><strong>専門分野:</strong> 学習障害、勉強方法指導</p>
+                        <p><strong>経験年数:</strong> 6年</p>
+                        <p><strong>資格:</strong> 学習科学修士、学習コーチ</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="mentor-detail.html?id=5" class="block text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                            詳細を見る
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 伴走者6 -->
+            <div class="mentor-card bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition" data-specialty="psychology">
+                <div class="p-6">
+                    <div class="w-20 h-20 bg-slate-300 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold text-slate-600">
+                        小林
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 text-center mb-2">小林真理</h3>
+                    <p class="text-slate-600 text-center mb-4">心理カウンセラー</p>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <p><strong>専門分野:</strong> トラウマケア、PTSD</p>
+                        <p><strong>経験年数:</strong> 9年</p>
+                        <p><strong>資格:</strong> 臨床心理士、EMDR療法士</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="mentor-detail.html?id=6" class="block text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                            詳細を見る
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 伴走者になる -->
+        <div class="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">伴走者として参加しませんか？</h3>
+            <p class="text-slate-600 mb-6">
+                あなたの専門知識と経験で、子どもたちの未来を支えませんか？
+            </p>
+            <a href="mentor-register.html" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold">
+                伴走者登録
+            </a>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script src="assets/script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const mentorCards = document.querySelectorAll('.mentor-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.classList.remove('bg-blue-600', 'text-white');
+                        btn.classList.add('bg-slate-200', 'text-slate-700');
+                    });
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    this.classList.remove('bg-slate-200', 'text-slate-700');
+                    this.classList.add('bg-blue-600', 'text-white');
+
+                    const filter = this.dataset.filter;
+
+                    mentorCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.specialty === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

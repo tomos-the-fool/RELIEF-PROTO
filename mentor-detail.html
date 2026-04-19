@@ -1,0 +1,556 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伴走者詳細 - Relief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-700">
+    <!-- ナビゲーションバー -->
+    <div id="nav"></div>
+
+    <!-- メインコンテンツ -->
+    <main class="max-w-4xl mx-auto p-4 py-12">
+        <!-- 伴走者プロフィール -->
+        <div class="mb-12 flex flex-col sm:flex-row gap-8">
+            <div class="flex-shrink-0">
+                <div class="w-40 h-40 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
+                    <div class="text-6xl font-bold text-white">YS</div>
+                </div>
+            </div>
+            <div class="flex-1">
+                <h1 class="text-3xl font-bold text-slate-800 mb-2">山田 太郎</h1>
+                <p class="text-lg text-slate-600 mb-4">臨床心理士・キャリアカウンセラー</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">うつ病</span>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">キャリア</span>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">人間関係</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">初回無料相談</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-slate-800">50</div>
+                        <div class="text-sm text-slate-600">支援実績</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-slate-800">4.8</div>
+                        <div class="text-sm text-slate-600">評価平均</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-slate-800">3年</div>
+                        <div class="text-sm text-slate-600">経験年数</div>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <button class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        相談を申し込む
+                    </button>
+                    <button class="px-6 py-3 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-medium">
+                        お気に入りに追加
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- タブナビゲーション -->
+        <div class="border-b border-slate-200 mb-8">
+            <nav class="flex space-x-8">
+                <button class="tab-button active py-4 px-1 border-b-2 border-blue-600 text-blue-600 font-medium" data-tab="profile">
+                    プロフィール
+                </button>
+                <button class="tab-button py-4 px-1 border-b-2 border-transparent text-slate-600 hover:text-slate-800 font-medium" data-tab="experience">
+                    経歴・資格
+                </button>
+                <button class="tab-button py-4 px-1 border-b-2 border-transparent text-slate-600 hover:text-slate-800 font-medium" data-tab="reviews">
+                    評価・口コミ
+                </button>
+                <button class="tab-button py-4 px-1 border-b-2 border-transparent text-slate-600 hover:text-slate-800 font-medium" data-tab="availability">
+                    予約可能時間
+                </button>
+            </nav>
+        </div>
+
+        <!-- タブコンテンツ -->
+        <div class="tab-content" id="profile">
+            <div class="space-y-6">
+                <section>
+                    <h2 class="text-xl font-bold text-slate-800 mb-4">自己紹介</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        こんにちは、山田太郎と申します。臨床心理士として10年以上の経験があり、これまで多くのクライアント様のメンタルヘルス支援に携わってまいりました。
+                        特にうつ病やキャリアに関する悩みに対して、認知行動療法を中心としたアプローチでサポートさせていただいています。
+                    </p>
+                    <p class="text-slate-600 leading-relaxed mt-4">
+                        私の強みは、クライアント様の話を丁寧にお聞きし、一緒に解決策を見つけていくことです。
+                        単にアドバイスをするのではなく、クライアント様ご自身が「気づき」を得られるような伴走を心がけています。
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-slate-800 mb-4">得意分野</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-slate-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-slate-800 mb-2">うつ病・気分障害</h3>
+                            <p class="text-sm text-slate-600">認知行動療法による治療支援、日常生活の改善アドバイス</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-slate-800 mb-2">キャリアカウンセリング</h3>
+                            <p class="text-sm text-slate-600">仕事の悩み、キャリアチェンジ、ワークライフバランス</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-slate-800 mb-2">人間関係の悩み</h3>
+                            <p class="text-sm text-slate-600">対人関係の改善、コミュニケーションスキル向上</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-slate-800 mb-2">ストレス管理</h3>
+                            <p class="text-sm text-slate-600">ストレス対処法、マインドフルネス、リラクゼーション</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-slate-800 mb-4">支援スタイル</h2>
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <p class="text-slate-700 leading-relaxed">
+                            私はクライアント様中心のアプローチを重視しています。まずはお話をじっくりとお聞きし、
+                            クライアント様のペースに合わせて支援プランを作成します。強制的なアドバイスではなく、
+                            ご自身で気づきを得られるような問いかけを心がけています。
+                        </p>
+                        <p class="text-slate-700 leading-relaxed mt-4">
+                            オンライン相談を中心に活動しており、初回は無料で30分の相談をお受けしています。
+                            継続的な支援をご希望の場合は、月額制のプランもご用意しております。
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="tab-content hidden" id="experience">
+            <div class="space-y-6">
+                <section>
+                    <h2 class="text-xl font-bold text-slate-800 mb-4">経歴</h2>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-blue-600 pl-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-semibold text-slate-800">臨床心理士</h3>
+                                <span class="text-sm text-slate-600">2021年 - 現在</span>
+                            </div>
+                            <p class="text-slate-600 text-sm">Reliefにて伴走者として活動。50名以上のクライアント様の支援実績。</p>
+                        </div>
+                        <div class="border-l-4 border-slate-300 pl-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-semibold text-slate-800">心理カウンセラー</h3>
+                                <span class="text-sm text-slate-600">2018年 - 2021年</span>
+                            </div>
+                            <p class="text-slate-600 text-sm">メンタルヘルスクリニックにて勤務。認知行動療法を中心に治療支援。</p>
+                        </div>
+                        <div class="border-l-4 border-slate-300 pl-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-semibold text-slate-800">キャリアカウンセラー</h3>
+                                <span class="text-sm text-slate-600">2015年 - 2018年</span>
+                            </div>
+                            <p class="text-slate-600 text-sm">人材紹介会社にてキャリアカウンセリング業務に従事。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-slate-800 mb-4">資格・研修</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                            <span class="text-slate-700">臨床心理士</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                            <span class="text-slate-700">キャリアカウンセラー</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                            <span class="text-slate-700">認知行動療法研修修了</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                            <span class="text-slate-700">マインドフルネスインストラクター</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                            <span class="text-slate-700">産業カウンセラー</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                            <span class="text-slate-700">NLPプラクティショナー</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="tab-content hidden" id="reviews">
+            <div class="space-y-6">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-xl font-bold text-slate-800">評価・口コミ (42件)</h2>
+                    <div class="flex items-center space-x-2">
+                        <div class="flex items-center">
+                            <span class="text-yellow-400">★★★★★</span>
+                        </div>
+                        <span class="text-slate-600 font-medium">4.8</span>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="border border-slate-200 rounded-lg p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                                <span class="text-sm text-slate-600">2024年5月15日</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-700 mb-2">
+                            とても丁寧に話を聞いてくださり、自分の考えが整理できました。キャリアの悩みに対して具体的なアドバイスをいただき、大変参考になりました。
+                        </p>
+                        <p class="text-sm text-slate-600">30代男性・会社員</p>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-lg p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                                <span class="text-sm text-slate-600">2024年5月8日</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-700 mb-2">
+                            うつ病の症状に悩んでいましたが、山田さんの穏やかな対応で安心して相談できました。認知行動療法の手法を教えていただき、日常生活が少しずつ改善されています。
+                        </p>
+                        <p class="text-sm text-slate-600">40代女性・主婦</p>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-lg p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-yellow-400">★★★★☆</span>
+                                <span class="text-sm text-slate-600">2024年4月20日</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-700 mb-2">
+                            人間関係の悩みを相談しました。的確なアドバイスをいただき、コミュニケーションの取り方が変わりました。もう少し具体的な事例を聞きたかったです。
+                        </p>
+                        <p class="text-sm text-slate-600">20代男性・学生</p>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-lg p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                                <span class="text-sm text-slate-600">2024年4月10日</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-700 mb-2">
+                            初回無料相談を利用しました。自分の状況を客観的に分析していただき、これからの方向性が明確になりました。継続して相談したいと思います。
+                        </p>
+                        <p class="text-sm text-slate-600">50代男性・自営業</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <button class="px-6 py-3 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-medium">
+                        もっと口コミを見る
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content hidden" id="availability">
+            <div class="space-y-6">
+                <section>
+                    <h2 class="text-xl font-bold text-slate-800 mb-4">予約可能時間</h2>
+                    <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                        <p class="text-slate-700">
+                            <strong>初回相談:</strong> 無料（30分）<br>
+                            <strong>通常相談:</strong> 5,000円/50分（オンラインのみ）
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-slate-800 mb-4">今週の予約可能枠</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="border border-slate-200 rounded-lg p-4">
+                            <h3 class="font-semibold text-slate-800 mb-3">月曜日</h3>
+                            <div class="space-y-2">
+                                <button class="w-full text-left px-3 py-2 bg-green-100 text-green-800 rounded text-sm hover:bg-green-200 transition-colors">
+                                    10:00 - 10:50 (オンライン)
+                                </button>
+                                <button class="w-full text-left px-3 py-2 bg-green-100 text-green-800 rounded text-sm hover:bg-green-200 transition-colors">
+                                    14:00 - 14:50 (オンライン)
+                                </button>
+                                <button class="w-full text-left px-3 py-2 bg-slate-100 text-slate-500 rounded text-sm cursor-not-allowed" disabled>
+                                    16:00 - 16:50 (予約済み)
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="border border-slate-200 rounded-lg p-4">
+                            <h3 class="font-semibold text-slate-800 mb-3">水曜日</h3>
+                            <div class="space-y-2">
+                                <button class="w-full text-left px-3 py-2 bg-green-100 text-green-800 rounded text-sm hover:bg-green-200 transition-colors">
+                                    11:00 - 11:50 (オンライン)
+                                </button>
+                                <button class="w-full text-left px-3 py-2 bg-green-100 text-green-800 rounded text-sm hover:bg-green-200 transition-colors">
+                                    15:00 - 15:50 (オンライン)
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="border border-slate-200 rounded-lg p-4">
+                            <h3 class="font-semibold text-slate-800 mb-3">金曜日</h3>
+                            <div class="space-y-2">
+                                <button class="w-full text-left px-3 py-2 bg-green-100 text-green-800 rounded text-sm hover:bg-green-200 transition-colors">
+                                    13:00 - 13:50 (オンライン)
+                                </button>
+                                <button class="w-full text-left px-3 py-2 bg-slate-100 text-slate-500 rounded text-sm cursor-not-allowed" disabled>
+                                    17:00 - 17:50 (予約済み)
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="border border-slate-200 rounded-lg p-4">
+                            <h3 class="font-semibold text-slate-800 mb-3">土曜日</h3>
+                            <div class="space-y-2">
+                                <button class="w-full text-left px-3 py-2 bg-green-100 text-green-800 rounded text-sm hover:bg-green-200 transition-colors">
+                                    10:00 - 10:50 (オンライン)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-slate-800 mb-4">予約方法</h2>
+                    <div class="bg-slate-50 p-4 rounded-lg">
+                        <ol class="list-decimal list-inside space-y-2 text-slate-700">
+                            <li>上記の予約可能枠から希望の日時を選択してください。</li>
+                            <li>選択後、自動的に予約フォームが表示されます。</li>
+                            <li>必要事項を入力して予約を確定してください。</li>
+                            <li>予約確定後、確認メールが送信されます。</li>
+                        </ol>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script src="assets/script.js" defer></script>
+    <script>
+        // タブ切り替え機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+
+                    // ボタンのアクティブ状態を更新
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active', 'border-blue-600', 'text-blue-600');
+                        btn.classList.add('border-transparent', 'text-slate-600');
+                    });
+                    this.classList.add('active', 'border-blue-600', 'text-blue-600');
+                    this.classList.remove('border-transparent', 'text-slate-600');
+
+                    // コンテンツの表示/非表示
+                    tabContents.forEach(content => {
+                        if (content.id === tabId) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>莨ｴ襍ｰ閠・ｩｳ邏ｰ - Relief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-700">
+    <!-- 繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ繝舌・ -->
+    <div id="nav"></div>
+
+    <!-- 繝｡繧､繝ｳ繧ｳ繝ｳ繝・Φ繝・-->
+    <main class="max-w-3xl mx-auto p-4 py-12">
+        <!-- 莨ｴ襍ｰ閠・渕譛ｬ諠・ｱ -->
+        <div class="mb-12 flex flex-col sm:flex-row gap-8">
+            <div class="flex-shrink-0">
+                <div class="w-40 h-40 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
+                    <div class="text-6xl font-bold text-white">YS</div>
+                </div>
+            </div>
+            <div class="flex-1">
+                <h1 class="text-4xl font-bold text-slate-800 mb-2">螻ｱ逕ｰ 邏泌ｭ・/h1>
+                <p class="text-xl text-blue-600 font-semibold mb-4">謨呵ご蠢・炊蟄ｦ蟆る摩 | 15蟷ｴ縺ｮ謖・ｰ守ｵ碁ｨ・/p>
+                <p class="text-slate-600 mb-6">
+                    譚ｱ莠ｬ驛ｽ蜀・・蟄ｦ譬｡縺ｧ15蟷ｴ髢薙√せ繧ｯ繝ｼ繝ｫ繧ｫ繧ｦ繝ｳ繧ｻ繝ｩ繝ｼ縺ｨ縺励※蜍､蜍吶ゆｸ咲匳譬｡蜈千ｫ･縺ｸ縺ｮ蠢・炊逧・し繝昴・繝医→蟄ｦ鄙呈髪謠ｴ繧帝壹§縺ｦ縲・00蜷堺ｻ･荳翫・縺雁ｭ舌＆繧薙→髢｢繧上▲縺ｦ縺阪∪縺励◆縲３elief 縺ｧ縺ｯ縲∝区ｧ繧貞ｰ企㍾縺励◆繧ｫ繧ｹ繧ｿ繝槭う繧ｺ縺輔ｌ縺滓髪謠ｴ繧貞ｿ・′縺代※縺・∪縺吶・
+                </p>
+                <div class="flex gap-3">
+                    <a href="faq-contact.html?mentor=1" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+                        縺薙・莨ｴ襍ｰ閠・↓逶ｸ隲・☆繧・
+                    </a>
+                    <a href="mentors.html" class="px-8 py-3 bg-white border-2 border-slate-300 text-slate-700 font-semibold rounded-lg hover:bg-slate-50 transition">
+                        荳隕ｧ縺ｫ謌ｻ繧・
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 蠕玲э蛻・㍽ -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">蠕玲э蛻・㍽</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                    <h3 class="font-bold text-slate-800 mb-2">笨・荳咲匳譬｡蜈千ｫ･縺ｮ繧ｵ繝昴・繝・/h3>
+                    <p class="text-sm text-slate-600">逋ｻ譬｡諡貞凄縺ｮ蜴溷屏蛻・梵縺ｨ谿ｵ髫守噪縺ｪ蟇ｾ蠢懊ｒ蟆る摩縺ｨ縺励※縺・∪縺吶・/p>
+                </div>
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                    <h3 class="font-bold text-slate-800 mb-2">笨・蠢・炊逧・し繝昴・繝・/h3>
+                    <p class="text-sm text-slate-600">繧ｫ繧ｦ繝ｳ繧ｻ繝ｪ繝ｳ繧ｰ繝槭う繝ｳ繝峨ｒ豢ｻ縺九＠縲∵ｰ玲戟縺｡縺ｫ蟇・ｊ豺ｻ縺・↑縺後ｉ謾ｯ謠ｴ縺励∪縺吶・/p>
+                </div>
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                    <h3 class="font-bold text-slate-800 mb-2">笨・蟄ｦ鄙堤嶌隲・/h3>
+                    <p class="text-sm text-slate-600">蟄ｦ鄙偵・驕・ｌ繧貞叙繧頑綾縺吶◆繧√・險育判遶区｡医→謾ｯ謠ｴ繧定｡後＞縺ｾ縺吶・/p>
+                </div>
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                    <h3 class="font-bold text-slate-800 mb-2">笨・隕ｪ蟄宣未菫ゅ・謾ｹ蝟・/h3>
+                    <p class="text-sm text-slate-600">菫晁ｭｷ閠・→縺ｮ髱｢隲・ｒ騾壹§縺ｦ縲∝ｮｶ蠎ｭ縺ｧ縺ｮ迺ｰ蠅・隼蝟・ｒ繧ｵ繝昴・繝医＠縺ｾ縺吶・/p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 雉・ｼ繝ｻ螳溽ｸｾ -->
+        <section class="mb-12 bg-slate-50 p-6 rounded-lg">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">雉・ｼ繝ｻ螳溽ｸｾ</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="font-bold text-slate-800 mb-2">雉・ｼ</h3>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>窶｢ 蜈ｬ隱榊ｿ・炊蟶ｫ</li>
+                        <li>窶｢ 繧ｹ繧ｯ繝ｼ繝ｫ繧ｫ繧ｦ繝ｳ繧ｻ繝ｩ繝ｼ鬢頑・遐比ｿｮ菫ｮ莠・/li>
+                        <li>窶｢ 隱榊ｮ壽蕗閧ｲ蠢・炊螢ｫ</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-800 mb-2">螳溽ｸｾ</h3>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>窶｢ 300蜷堺ｻ･荳翫・荳咲匳譬｡蜈千ｫ･縺ｮ謾ｯ謠ｴ邨碁ｨ・/li>
+                        <li>窶｢ 蟄ｦ譬｡蠕ｩ蟶ｰ邇・85%</li>
+                        <li>窶｢ 譌･譛ｬ謨呵ご蠢・炊蟄ｦ莨壻ｼ壼藤</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 蟇ｾ蠢懷庄閭ｽ譎る俣 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">蟇ｾ蠢懷庄閭ｽ譎る俣</h2>
+            <div class="bg-white border border-slate-200 rounded-lg overflow-hidden">
+                <table class="w-full">
+                    <thead class="bg-slate-100 border-b">
+                        <tr>
+                            <th class="p-4 text-left font-bold text-slate-800">譖懈律</th>
+                            <th class="p-4 text-left font-bold text-slate-800">蟇ｾ蠢懈凾髢灘ｸｯ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="p-4">譛茨ｽ樣≡</td>
+                            <td class="p-4">16:00・・9:00 (莉穂ｺ狗ｵゆｺ・ｾ・</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-4">蝨・/td>
+                            <td class="p-4">10:00・・6:00</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4">譌･</td>
+                            <td class="p-4">蠢懃嶌隲・/td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-sm text-slate-500 mt-4">窶ｻ 繧ｹ繧ｱ繧ｸ繝･繝ｼ繝ｫ隱ｿ謨ｴ縺ｧ螟画峩蜿ｯ閭ｽ縺ｪ蝣ｴ蜷医′縺ゅｊ縺ｾ縺・/p>
+        </section>
+
+        <!-- 逶ｸ隲・婿豕・-->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">逶ｸ隲・婿豕・/h2>
+            <div class="space-y-4">
+                <div class="bg-white border border-slate-200 rounded-lg p-4">
+                    <h3 class="font-bold text-slate-800 mb-2">道 繝薙ョ繧ｪ騾夊ｩｱ</h3>
+                    <p class="text-slate-600 text-sm">Zoom 繧・Google Meet 繧剃ｽｿ逕ｨ縺励◆繧ｪ繝ｳ繝ｩ繧､繝ｳ髱｢隲・/p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-lg p-4">
+                    <h3 class="font-bold text-slate-800 mb-2">町 繝√Ε繝・ヨ逶ｸ隲・/h3>
+                    <p class="text-slate-600 text-sm">螳壽悄逧・↑繝・く繧ｹ繝医Γ繝・そ繝ｼ繧ｸ縺ｧ縺ｮ繧・ｊ蜿悶ｊ</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-lg p-4">
+                    <h3 class="font-bold text-slate-800 mb-2">搭 繧ｳ繝ｼ繧ｹ</h3>
+                    <p class="text-slate-600 text-sm">騾ｱ1蝗槭・螳壽悄髱｢隲・√∪縺溘・譛・蝗槭・繧ｳ繝ｼ繧ｹ縺九ｉ驕ｸ謚槫庄閭ｽ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 繝｡繝・そ繝ｼ繧ｸ -->
+        <section class="mb-12 bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
+            <h2 class="text-2xl font-bold text-slate-800 mb-4">螻ｱ逕ｰ縺九ｉ縺ｮ繝｡繝・そ繝ｼ繧ｸ</h2>
+            <p class="text-slate-700 leading-relaxed">
+                縺雁ｭ舌＆繧薙′荳咲匳譬｡縺ｫ縺ｪ繧九％縺ｨ縺ｯ縲∬ｪｰ縺ｫ縺ｧ繧りｵｷ縺薙ｊ縺・ｋ縺薙→縺ｧ縺吶ょ､ｧ莠九↑縺ｮ縺ｯ縲√◎縺薙°繧峨←縺・ｲ繧縺九〒縺吶らｧ√・縲∝ｭ舌←繧ゅ◆縺｡縺ｮ螢ｰ繧呈怙蜆ｪ蜈医↓縺励↑縺後ｉ縲∬ｦｪ蟄舌〒荳邱偵↓豁ｩ繧薙〒縺・￥莨ｴ襍ｰ閠・↓縺ｪ繧翫◆縺・→諤昴▲縺ｦ縺・∪縺吶ょｭｦ譬｡縺ｫ陦後￥縺薙→縺縺代′豁｣隗｣縺ｧ縺ｯ縺ｪ縺上√◎縺ｮ蟄舌↓縺ｨ縺｣縺ｦ譛驕ｩ縺ｪ驕ｸ謚櫁い繧剃ｸ邱偵↓謗｢縺励※縺・″縺ｾ縺励ｇ縺・・
+            </p>
+        </section>
+
+        <!-- 繝ｦ繝ｼ繧ｶ繝ｼ隧穂ｾ｡・医し繝ｳ繝励Ν・・-->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">繝ｦ繝ｼ繧ｶ繝ｼ縺九ｉ縺ｮ隧穂ｾ｡</h2>
+            <div class="space-y-4">
+                <div class="bg-white border border-slate-200 rounded-lg p-4">
+                    <div class="flex gap-2 mb-2">
+                        <span class="text-yellow-400">笘・・笘・・笘・/span>
+                    </div>
+                    <p class="text-slate-600 text-sm">
+                        縲悟ｨ倥・豌玲戟縺｡縺ｫ蟇・ｊ豺ｻ縺｣縺ｦ縺上ｌ繧句ｯｾ蠢懊′邏譎ｴ繧峨＠縺・〒縺吶りｦｪ縺ｮ謔ｩ縺ｿ繧り◇縺・※縺上ｌ繧九・縺ｧ縲√→縺ｦ繧ょｿ・ｼｷ縺・〒縺吶ゅ・
+                    </p>
+                    <p class="text-slate-500 text-xs mt-2">- 菫晁ｭｷ閠・ｈ繧・/p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-lg p-4">
+                    <div class="flex gap-2 mb-2">
+                        <span class="text-yellow-400">笘・・笘・・笘・/span>
+                    </div>
+                    <p class="text-slate-600 text-sm">
+                        縲悟・逕溘・隧ｱ繧定◇縺・※縺・ｋ縺ｨ縲∝ｭｦ譬｡縺ｫ陦後″縺溘￥縺ｪ繧区ｰ玲戟縺｡縺悟ｰ代＠縺壹▽蜃ｺ縺ｦ縺阪∪縺励◆縲ゅ≠繧翫′縺ｨ縺・＃縺悶＞縺ｾ縺吶ゅ・
+                    </p>
+                    <p class="text-slate-500 text-xs mt-2">- 蛻ｩ逕ｨ閠・ｈ繧・/p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">螻ｱ逕ｰ 邏泌ｭ舌↓逶ｸ隲・＠縺ｦ縺ｿ縺ｾ縺励ｇ縺・/h3>
+            <a href="faq-contact.html?mentor=1" class="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+                逶ｸ隲・ヵ繧ｩ繝ｼ繝縺ｸ
+            </a>
+        </div>
+    </main>
+
+    <!-- 繝輔ャ繧ｿ繝ｼ -->
+    <div id="footer"></div>
+
+    <script src="/assets/script.js"></script>
+</body>
+</html>

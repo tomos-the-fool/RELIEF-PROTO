@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支援事業者登録 - Relief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-700">
+    <!-- ナビゲーションバー -->
+    <div id="nav"></div>
+
+    <!-- メインコンテンツ -->
+    <main class="max-w-3xl mx-auto p-4 py-12">
+        <h1 class="text-4xl font-bold text-slate-800 mb-4">支援事業者登録</h1>
+        <p class="text-lg text-slate-600 mb-8">
+            Reliefの支援事業者パートナーとして活動をご希望の方は、以下のフォームからお申し込みください。
+            審査後、登録の可否についてご連絡いたします。
+        </p>
+
+        <!-- 登録フォーム -->
+        <form class="space-y-8" id="provider-register-form">
+            <!-- 事業者情報 -->
+            <section class="bg-slate-50 p-6 rounded-lg">
+                <h2 class="text-xl font-bold text-slate-800 mb-6">事業者情報</h2>
+
+                <div class="mb-6">
+                    <label for="company-name" class="block text-sm font-medium text-slate-700 mb-2">事業者名（法人名） *</label>
+                    <input type="text" id="company-name" name="company-name" required
+                           class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div class="mb-6">
+                    <label for="company-type" class="block text-sm font-medium text-slate-700 mb-2">事業形態 *</label>
+                    <select id="company-type" name="company-type" required
+                            class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="">選択してください</option>
+                        <option value="corporation">株式会社</option>
+                        <option value="llc">合同会社</option>
+                        <option value="foundation">財団法人</option>
+                        <option value="association">社団法人</option>
+                        <option value="npo">特定非営利活動法人</option>
+                        <option value="individual">個人事業主</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+
+                <div class="mb-6">
+                    <label for="representative" class="block text-sm font-medium text-slate-700 mb-2">代表者名 *</label>
+                    <input type="text" id="representative" name="representative" required
+                           class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div class="mb-6">
+                    <label for="established" class="block text-sm font-medium text-slate-700 mb-2">設立年月</label>
+                    <input type="month" id="established" name="established"
+                           class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div class="mb-6">
+                    <label for="employees" class="block text-sm font-medium text-slate-700 mb-2">従業員数</label>
+                    <select id="employees" name="employees"
+                            class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="">選択してください</option>
+                        <option value="1-5">1-5名</option>
+                        <option value="6-10">6-10名</option>
+                        <option value="11-20">11-20名</option>
+                        <option value="21-50">21-50名</option>
+                        <option value="51-100">51-100名</option>
+                        <option value="100+">100名以上</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- 連絡先情報 -->
+            <section class="bg-slate-50 p-6 rounded-lg">
+                <h2 class="text-xl font-bold text-slate-800 mb-6">連絡先情報</h2>
+
+                <div class="mb-6">
+                    <label for="address" class="block text-sm font-medium text-slate-700 mb-2">所在地 *</label>
+                    <input type="text" id="address" name="address" required
+                           placeholder="郵便番号、住所"
+                           class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div class="mb-6">
+                    <label for="phone" class="block text-sm font-medium text-slate-700 mb-2">電話番号 *</label>
+                    <input type="tel" id="phone" name="phone" required
+                           class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div class="mb-6">
+                    <label for="email" class="block text-sm font-medium text-slate-700 mb-2">メールアドレス *</label>
+                    <input type="email" id="email" name="email" required
+                           class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div class="mb-6">
+                    <label for="website" class="block text-sm font-medium text-slate-700 mb-2">ウェブサイト</label>
+                    <input type="url" id="website" name="website"
+                           placeholder="https://example.com"
+                           class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </section>
+
+            <!-- 事業内容 -->
+            <section class="bg-slate-50 p-6 rounded-lg">
+                <h2 class="text-xl font-bold text-slate-800 mb-6">事業内容</h2>
+
+                <div class="mb-6">
+                    <label for="business-description" class="block text-sm font-medium text-slate-700 mb-2">事業内容の概要 *</label>
+                    <textarea id="business-description" name="business-description" rows="4" required
+                              placeholder="事業内容について簡潔にご説明ください"
+                              class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-slate-700 mb-4">支援分野（複数選択可） *</label>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="support-fields" value="counseling" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">カウンセリング</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="support-fields" value="training" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">研修・トレーニング</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="support-fields" value="assessment" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">アセスメント</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="support-fields" value="consulting" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">コンサルティング</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="support-fields" value="therapy" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">療法・治療</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="support-fields" value="prevention" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">予防プログラム</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="support-fields" value="education" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">教育・啓発</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="support-fields" value="other" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">その他</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="target-audience" class="block text-sm font-medium text-slate-700 mb-2">対象者</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="target-audience" value="individuals" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">個人</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="target-audience" value="families" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">家族</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="target-audience" value="companies" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">企業・団体</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="target-audience" value="schools" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">学校・教育機関</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="target-audience" value="communities" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">地域コミュニティ</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="qualifications" class="block text-sm font-medium text-slate-700 mb-2">保有資格・認定</label>
+                    <textarea id="qualifications" name="qualifications" rows="3"
+                              placeholder="事業者が保有する資格や認定についてご記入ください"
+                              class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+            </section>
+
+            <!-- 連携希望 -->
+            <section class="bg-slate-50 p-6 rounded-lg">
+                <h2 class="text-xl font-bold text-slate-800 mb-6">連携希望</h2>
+
+                <div class="mb-6">
+                    <label for="collaboration-type" class="block text-sm font-medium text-slate-700 mb-2">希望する連携形態 *</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="radio" name="collaboration-type" value="referral" required class="border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">クライアント紹介（リファラル）</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="collaboration-type" value="joint-service" class="border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">共同サービス提供</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="collaboration-type" value="training" class="border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">伴走者研修の提供</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="collaboration-type" value="other" class="border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">その他</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="collaboration-details" class="block text-sm font-medium text-slate-700 mb-2">連携内容の詳細</label>
+                    <textarea id="collaboration-details" name="collaboration-details" rows="4"
+                              placeholder="どのような連携を希望するか、具体的にご説明ください"
+                              class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+
+                <div class="mb-6">
+                    <label for="motivation" class="block text-sm font-medium text-slate-700 mb-2">連携を希望する理由 *</label>
+                    <textarea id="motivation" name="motivation" rows="3" required
+                              placeholder="なぜReliefと連携したいのかをご記入ください"
+                              class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+            </section>
+
+            <!-- 同意事項 -->
+            <section class="bg-slate-50 p-6 rounded-lg">
+                <h2 class="text-xl font-bold text-slate-800 mb-6">同意事項</h2>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="flex items-start">
+                            <input type="checkbox" id="terms-agreement" name="terms-agreement" required class="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">
+                                <a href="terms-provider.html" class="text-blue-600 hover:text-blue-800 underline">支援事業者利用規約</a>に同意します *
+                            </span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label class="flex items-start">
+                            <input type="checkbox" id="privacy-agreement" name="privacy-agreement" required class="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">
+                                <a href="privacy.html" class="text-blue-600 hover:text-blue-800 underline">プライバシーポリシー</a>に同意します *
+                            </span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label class="flex items-start">
+                            <input type="checkbox" id="accuracy-confirmation" name="accuracy-confirmation" required class="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">
+                                記載された情報は正確であり、虚偽の記載がないことを確認します *
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 送信ボタン -->
+            <div class="text-center">
+                <button type="submit" class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                    登録申請を送信する
+                </button>
+                <p class="text-sm text-slate-600 mt-4">
+                    送信後、審査の結果について1週間以内にメールにてご連絡いたします。
+                </p>
+            </div>
+        </form>
+    </main>
+
+    <div id="footer"></div>
+    <script src="assets/script.js" defer></script>
+    <script>
+        // フォームバリデーション
+        document.getElementById('provider-register-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // 支援分野のチェック
+            const supportFields = document.querySelectorAll('input[name="support-fields"]:checked');
+            if (supportFields.length === 0) {
+                alert('支援分野を1つ以上選択してください。');
+                return;
+            }
+
+            // 対象者のチェック
+            const targetAudiences = document.querySelectorAll('input[name="target-audience"]:checked');
+            if (targetAudiences.length === 0) {
+                alert('対象者を1つ以上選択してください。');
+                return;
+            }
+
+            // 連携形態のチェック
+            const collaborationType = document.querySelector('input[name="collaboration-type"]:checked');
+            if (!collaborationType) {
+                alert('希望する連携形態を選択してください。');
+                return;
+            }
+
+            // 送信処理（実際の送信はここで行う）
+            alert('登録申請を送信しました。審査結果をお待ちください。');
+            // this.submit(); // 実際の送信時はコメントアウトを外す
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謾ｯ謠ｴ莠区･ｭ閠・匳骭ｲ - Relief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-700">
+    <!-- 繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ繝舌・ -->
+    <div id="nav"></div>
+
+    <!-- 繝｡繧､繝ｳ繧ｳ繝ｳ繝・Φ繝・-->
+    <main class="max-w-3xl mx-auto p-4 py-12">
+        <h1 class="text-4xl font-bold text-slate-800 mb-4">謾ｯ謠ｴ莠区･ｭ閠・匳骭ｲ</h1>
+        <p class="text-lg text-slate-600 mb-12">
+            Relief 縺ｮ繝代・繝医リ繝ｼ縺ｨ縺励※縲∵蕗閧ｲ繧ｵ繝ｼ繝薙せ縲∝ｭｦ鄙呈蕗譚舌∫嶌隲・し繝ｼ繝薙せ縺ｪ縺ｩ繧呈署萓帙＠縺ｦ縺・◆縺縺丈ｺ区･ｭ閠・ｧ倥・縺皮匳骭ｲ繧偵♀蜿励￠縺励※縺・∪縺吶・
+        </p>
+
+        <!-- 蟇ｾ雎｡莠区･ｭ閠・-->
+        <section class="mb-12 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
+            <h2 class="text-2xl font-bold text-slate-800 mb-4">蟇ｾ雎｡縺ｨ縺ｪ繧区髪謠ｴ莠区･ｭ閠・/h2>
+            <p class="text-slate-600 mb-4">
+                莉･荳九・繧医≧縺ｪ繧ｵ繝ｼ繝薙せ繧呈署萓帙＆繧後※縺・ｋ莠区･ｭ閠・ｧ倥ｒ縺頑爾縺励＠縺ｦ縺・∪縺呻ｼ・
+            </p>
+            <ul class="space-y-2 text-slate-600">
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笨・/span>
+                    <span>繧ｪ繝ｳ繝ｩ繧､繝ｳ蟄ｦ鄙呈蕗譚舌・隰帛ｺｧ縺ｮ謠蝉ｾ・/span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笨・/span>
+                    <span>螳壽凾蛻ｶ繝ｻ騾壻ｿ｡蛻ｶ鬮俶｡縺ｪ縺ｩ縺ｮ蟄ｦ譬｡邏ｹ莉・/span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笨・/span>
+                    <span>蠢・炊繧ｫ繧ｦ繝ｳ繧ｻ繝ｪ繝ｳ繧ｰ繝ｻ逶ｸ隲・し繝ｼ繝薙せ</span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笨・/span>
+                    <span>逋ｺ驕疲髪謠ｴ繝ｻ險ｺ譁ｭ繧ｵ繝ｼ繝薙せ</span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笨・/span>
+                    <span>荳咲匳譬｡縺ｫ髢｢縺吶ｋ逶ｸ隲・・謾ｯ謠ｴ繝励Ο繧ｰ繝ｩ繝</span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笨・/span>
+                    <span>騾ｲ蟄ｦ繝ｻ騾ｲ霍ｯ謾ｯ謠ｴ繧ｵ繝ｼ繝薙せ</span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笨・/span>
+                    <span>縺昴・莉悶∝ｭ舌←繧ゅ→螳ｶ譌上ｒ謾ｯ謠ｴ縺吶ｋ繧ｵ繝ｼ繝薙せ</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 繝代・繝医リ繝ｼ縺ｮ繝｡繝ｪ繝・ヨ -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Relief 縺ｮ繝代・繝医リ繝ｼ縺ｫ縺ｪ繧九Γ繝ｪ繝・ヨ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white border border-slate-200 rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">笨・繝ｦ繝ｼ繧ｶ繝ｼ繧｢繧ｯ繧ｻ繧ｹ</h3>
+                    <p class="text-slate-600 text-sm">
+                        Relief 縺ｮ蛻ｩ逕ｨ繝ｦ繝ｼ繧ｶ繝ｼ縺ｫ逶ｴ謗･繧ｵ繝ｼ繝薙せ繧呈署萓帙〒縺阪∪縺吶ゆｸ咲匳譬｡繧・匱驕疲髪謠ｴ繧呈ｱゅａ繧玖ｳｪ縺ｮ鬮倥＞繝ｦ繝ｼ繧ｶ繝ｼ螻､縺ｫ繧｢繧ｯ繧ｻ繧ｹ蜿ｯ閭ｽ縺ｧ縺吶・
+                    </p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">笨・繝悶Λ繝ｳ繝我ｿ｡鬆ｼ諤ｧ</h3>
+                    <p class="text-slate-600 text-sm">
+                        Relief 縺ｮ繝悶Λ繝ｳ繝峨→菫｡鬆ｼ諤ｧ繧呈ｴｻ逕ｨ縺励※縲√し繝ｼ繝薙せ縺ｮ隱咲衍蠎ｦ繧貞髄荳翫＆縺帙ｋ縺薙→縺後〒縺阪∪縺吶・
+                    </p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">笨・繝槭・繧ｱ繝・ぅ繝ｳ繧ｰ謾ｯ謠ｴ</h3>
+                    <p class="text-slate-600 text-sm">
+                        Relief 縺ｮ繧ｦ繧ｧ繝悶し繧､繝医ヾNS縲√Γ繝ｼ繝ｫ驟堺ｿ｡繧帝壹§縺溷・蜷後・繝ｼ繧ｱ繝・ぅ繝ｳ繧ｰ繧偵し繝昴・繝医＠縺ｾ縺吶・
+                    </p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">笨・繝阪ャ繝医Ρ繝ｼ繧ｯ諡｡螟ｧ</h3>
+                    <p class="text-slate-600 text-sm">
+                        Relief 縺ｮ繝代・繝医リ繝ｼ莨∵･ｭ繝ｻ蝗｣菴薙→縺ｮ繝阪ャ繝医Ρ繝ｼ繧ｯ縺ｫ蜿ょ刈縺ｧ縺阪∵眠縺溘↑繝薙ず繝阪せ讖滉ｼ壹′逕溘∪繧後∪縺吶・
+                    </p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">笨・繧ｵ繝昴・繝井ｽ灘宛</h3>
+                    <p class="text-slate-600 text-sm">
+                        Relief 縺ｮ繝√・繝縺後ヱ繝ｼ繝医リ繝ｼ繧ｷ繝・・驕句霧繧呈髪謠ｴ縺励∝ｮ壽悄逧・↑繝溘・繝・ぅ繝ｳ繧ｰ繧貞ｮ滓命縺励∪縺吶・
+                    </p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">笨・遉ｾ莨夊ｲ｢迪ｮ</h3>
+                    <p class="text-slate-600 text-sm">
+                        荳咲匳譬｡繧・匱驕疲髪謠ｴ縺ｨ縺・≧遉ｾ莨夂噪隱ｲ鬘後↓蜿悶ｊ邨・∩縲√ｈ繧雁､壹￥縺ｮ蟄舌←繧ゅ→螳ｶ譌上ｒ繧ｵ繝昴・繝医〒縺阪∪縺吶・
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 逋ｻ骭ｲ繝励Ο繧ｻ繧ｹ -->
+        <section class="mb-12 bg-slate-50 p-8 rounded-lg">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">逋ｻ骭ｲ縺ｾ縺ｧ縺ｮ繧ｹ繝・ャ繝・/h2>
+            <div class="space-y-6">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                        1
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2">逕ｳ縺苓ｾｼ縺ｿ繝輔か繝ｼ繝騾∽ｿ｡</h3>
+                        <p class="text-slate-600">莉･荳九・繝輔か繝ｼ繝縺ｫ縺ｦ縲∽ｺ区･ｭ蜀・ｮｹ縲√し繝ｼ繝薙せ讎りｦ√↑縺ｩ繧貞・蜉帙＠縺ｦ縺上□縺輔＞縲・/p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                        2
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2">蛻晄悄蟇ｩ譟ｻ</h3>
+                        <p class="text-slate-600">Relief 繝√・繝縺後＃逕ｳ蜻雁・螳ｹ繧堤｢ｺ隱阪＠縲・←蜷域ｧ繧貞愛譁ｭ縺励∪縺吶ゑｼ・・・騾ｱ髢難ｼ・/p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                        3
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2">髱｢隲・・謠先｡・/h3>
+                        <p class="text-slate-600">Relief 繝√・繝縺ｨ繧ｪ繝ｳ繝ｩ繧､繝ｳ髱｢隲・ｒ螳滓命縺励√ヱ繝ｼ繝医リ繝ｼ繧ｷ繝・・蜀・ｮｹ繧貞鵠隴ｰ縺励∪縺吶・/p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                        4
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2">螂醍ｴ・ｷ邨・/h3>
+                        <p class="text-slate-600">繝代・繝医リ繝ｼ繧ｷ繝・・螂醍ｴ・ｒ邱邨舌＠縲∵ｭ｣蠑上↓繝代・繝医リ繝ｼ縺ｨ縺ｪ繧翫∪縺吶・/p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                        5
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2">繧ｵ繝ｼ繝薙せ謠蝉ｾ幃幕蟋・/h3>
+                        <p class="text-slate-600">Relief 繝ｦ繝ｼ繧ｶ繝ｼ縺ｸ縺ｮ繧ｵ繝ｼ繝薙せ謠蝉ｾ帙ｒ髢句ｧ九＠縲∫ｶ咏ｶ夂噪縺ｫ繧ｵ繝昴・繝医ｒ陦後＞縺ｾ縺吶・/p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 逋ｻ骭ｲ繝輔か繝ｼ繝 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">逋ｻ骭ｲ繝輔か繝ｼ繝</h2>
+            <p class="text-slate-600 mb-6">
+                莉･荳九・繝輔か繝ｼ繝縺ｫ蠢・ｦ∽ｺ矩・ｒ縺泌・蜉帙￥縺縺輔＞縲・icrosoft Forms 縺ｧ逋ｻ骭ｲ繧貞女縺台ｻ倥￠縺ｦ縺・∪縺吶・
+            </p>
+
+            <!-- Microsoft Forms 縺ｮ iframe -->
+            <div class="bg-gray-100 border border-slate-200 rounded-lg overflow-hidden shadow-md">
+                <iframe 
+                    src="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_FORM_ID" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    style="width:100%; height:600px; min-height:600px; border:none;">
+                    繝輔か繝ｼ繝繧定ｪｭ縺ｿ霎ｼ縺ｿ荳ｭ窶ｦ
+                </iframe>
+            </div>
+
+            <p class="text-sm text-slate-500 mt-4">
+                窶ｻ Microsoft Forms 縺瑚ｪｭ縺ｿ霎ｼ繧√↑縺・ｴ蜷医・縲・a href="faq-contact.html" class="text-blue-600 hover:underline">蛻･縺ｮ繝輔か繝ｼ繝</a>縺九ｉ縺ｮ縺皮匳骭ｲ繧ょ庄閭ｽ縺ｧ縺吶・
+            </p>
+        </section>
+
+        <!-- 繧医￥縺ゅｋ雉ｪ蝠・-->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">繧医￥縺ゅｋ雉ｪ蝠・/h2>
+            <div class="space-y-4">
+                <details class="bg-white border border-slate-200 rounded-lg p-4 cursor-pointer">
+                    <summary class="font-semibold text-slate-800">謇区焚譁吶ｄ繧ｳ繧ｹ繝郁ｲ諡・・縺ｩ縺ｮ繧医≧縺ｫ縺ｪ繧翫∪縺吶°・・/summary>
+                    <p class="mt-3 text-slate-600 text-sm">
+                        繝代・繝医リ繝ｼ繧ｷ繝・・縺ｮ蠖｢諷九↓繧医ｊ逡ｰ縺ｪ繧翫∪縺吶りｩｳ縺励￥縺ｯ<a href="terms-provider.html" class="text-blue-600 hover:underline">謾ｯ謠ｴ莠区･ｭ閠・髄縺大茜逕ｨ隕冗ｴ・/a>繧偵＃蜿ら・縺・◆縺縺上°縲・擇隲・凾縺ｫ縺碑ｪｬ譏弱＞縺溘＠縺ｾ縺吶・
+                    </p>
+                </details>
+
+                <details class="bg-white border border-slate-200 rounded-lg p-4 cursor-pointer">
+                    <summary class="font-semibold text-slate-800">豬ｷ螟悶・莠区･ｭ閠・ｂ逋ｻ骭ｲ縺ｧ縺阪∪縺吶°・・/summary>
+                    <p class="mt-3 text-slate-600 text-sm">
+                        蜿ｯ閭ｽ縺ｪ蝣ｴ蜷医′縺ゅｊ縺ｾ縺吶りｩｳ縺励￥縺ｯ縺雁撫縺・粋繧上○縺上□縺輔＞縲・
+                    </p>
+                </details>
+
+                <details class="bg-white border border-slate-200 rounded-lg p-4 cursor-pointer">
+                    <summary class="font-semibold text-slate-800">繝ｦ繝ｼ繧ｶ繝ｼ繝・・繧ｿ縺ｫ繧｢繧ｯ繧ｻ繧ｹ縺ｧ縺阪∪縺吶°・・/summary>
+                    <p class="mt-3 text-slate-600 text-sm">
+                        繝ｦ繝ｼ繧ｶ繝ｼ繝・・繧ｿ縺ｯ Relief 縺悟宍蟇・↓邂｡逅・＠縺ｦ縺翫ｊ縲∽ｺ区･ｭ閠・ｧ倥′繝ｦ繝ｼ繧ｶ繝ｼ縺ｮ蛟倶ｺｺ諠・ｱ縺ｫ逶ｴ謗･繧｢繧ｯ繧ｻ繧ｹ縺吶ｋ縺薙→縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲ゅし繝ｼ繝薙せ謠蝉ｾ帙↓蠢・ｦ√↑諠・ｱ縺ｯ縲ヽelief 縺九ｉ謠蝉ｾ帙＆繧後∪縺吶・
+                    </p>
+                </details>
+
+                <details class="bg-white border border-slate-200 rounded-lg p-4 cursor-pointer">
+                    <summary class="font-semibold text-slate-800">螂醍ｴ・悄髢薙・縺ｩ縺ｮ縺上ｉ縺・〒縺吶°・・/summary>
+                    <p class="mt-3 text-slate-600 text-sm">
+                        蛻晏屓螂醍ｴ・・1蟷ｴ髢薙〒縺吶ゅ◎縺ｮ蠕後∝曙譁ｹ縺ｮ蜷域э縺ｫ繧医ｊ譖ｴ譁ｰ縺ｧ縺阪∪縺吶りｩｳ縺励￥縺ｯ<a href="terms-provider.html" class="text-blue-600 hover:underline">謾ｯ謠ｴ莠区･ｭ閠・髄縺大茜逕ｨ隕冗ｴ・/a>繧偵＃蜿ら・縺上□縺輔＞縲・
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- 蝠上＞蜷医ｏ縺佞TA -->
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">繝代・繝医リ繝ｼ繧ｷ繝・・縺ｫ縺､縺・※縺ｮ縺碑ｳｪ蝠・/h3>
+            <p class="text-slate-600 mb-6">逋ｻ骭ｲ縺ｫ髢｢縺吶ｋ縺碑ｳｪ蝠上ｄ縲√ｈ繧願ｩｳ縺励＞縺願ｩｱ繧貞ｸ梧悍縺輔ｌ繧句ｴ蜷医・縺頑ｰ苓ｻｽ縺ｫ縺雁撫縺・粋繧上○縺上□縺輔＞縲・/p>
+            <a href="faq-contact.html" class="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+                縺雁撫縺・粋繧上○
+            </a>
+        </div>
+    </main>
+
+    <!-- 繝輔ャ繧ｿ繝ｼ -->
+    <div id="footer"></div>
+
+    <script src="/assets/script.js"></script>
+</body>
+</html>

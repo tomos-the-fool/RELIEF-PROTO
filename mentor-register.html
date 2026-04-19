@@ -1,0 +1,484 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伴走者登録 - Relief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-700">
+    <!-- ナビゲーションバー -->
+    <div id="nav"></div>
+
+    <!-- メインコンテンツ -->
+    <main class="max-w-3xl mx-auto p-4 py-12">
+        <h1 class="text-4xl font-bold text-slate-800 mb-4">伴走者登録</h1>
+        <p class="text-lg text-slate-600 mb-8">
+            Reliefの伴走者として活動をご希望の方は、以下のフォームからお申し込みください。
+            審査後、登録の可否についてご連絡いたします。
+        </p>
+
+        <!-- 登録フォーム -->
+        <form class="space-y-8" id="mentor-register-form">
+            <!-- 基本情報 -->
+            <section class="bg-slate-50 p-6 rounded-lg">
+                <h2 class="text-xl font-bold text-slate-800 mb-6">基本情報</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="last-name" class="block text-sm font-medium text-slate-700 mb-2">姓 *</label>
+                        <input type="text" id="last-name" name="last-name" required
+                               class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="first-name" class="block text-sm font-medium text-slate-700 mb-2">名 *</label>
+                        <input type="text" id="first-name" name="first-name" required
+                               class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label for="email" class="block text-sm font-medium text-slate-700 mb-2">メールアドレス *</label>
+                    <input type="email" id="email" name="email" required
+                           class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div class="mt-6">
+                    <label for="phone" class="block text-sm font-medium text-slate-700 mb-2">電話番号 *</label>
+                    <input type="tel" id="phone" name="phone" required
+                           class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div class="mt-6">
+                    <label for="birthdate" class="block text-sm font-medium text-slate-700 mb-2">生年月日 *</label>
+                    <input type="date" id="birthdate" name="birthdate" required
+                           class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div class="mt-6">
+                    <label for="gender" class="block text-sm font-medium text-slate-700 mb-2">性別 *</label>
+                    <select id="gender" name="gender" required
+                            class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="">選択してください</option>
+                        <option value="male">男性</option>
+                        <option value="female">女性</option>
+                        <option value="other">その他</option>
+                        <option value="prefer-not-to-say">回答しない</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- 専門情報 -->
+            <section class="bg-slate-50 p-6 rounded-lg">
+                <h2 class="text-xl font-bold text-slate-800 mb-6">専門情報</h2>
+
+                <div class="mb-6">
+                    <label for="occupation" class="block text-sm font-medium text-slate-700 mb-2">現在の職業 *</label>
+                    <input type="text" id="occupation" name="occupation" required
+                           placeholder="例: 臨床心理士、カウンセラー、キャリアコンサルタント"
+                           class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div class="mb-6">
+                    <label for="experience" class="block text-sm font-medium text-slate-700 mb-2">支援経験年数 *</label>
+                    <select id="experience" name="experience" required
+                            class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="">選択してください</option>
+                        <option value="0-1">1年未満</option>
+                        <option value="1-3">1-3年</option>
+                        <option value="3-5">3-5年</option>
+                        <option value="5-10">5-10年</option>
+                        <option value="10+">10年以上</option>
+                    </select>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-slate-700 mb-4">得意分野（複数選択可） *</label>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="specialties" value="depression" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">うつ病・気分障害</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="specialties" value="anxiety" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">不安障害</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="specialties" value="career" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">キャリア</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="specialties" value="relationships" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">人間関係</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="specialties" value="stress" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">ストレス管理</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="specialties" value="life-transition" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">ライフイベント</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="specialties" value="youth" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">若年層支援</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="specialties" value="elderly" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">高齢者支援</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="specialties" value="other" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">その他</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="qualifications" class="block text-sm font-medium text-slate-700 mb-2">資格・研修歴</label>
+                    <textarea id="qualifications" name="qualifications" rows="4"
+                              placeholder="取得している資格や受講した研修についてご記入ください"
+                              class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+
+                <div class="mb-6">
+                    <label for="approach" class="block text-sm font-medium text-slate-700 mb-2">支援アプローチ</label>
+                    <textarea id="approach" name="approach" rows="4"
+                              placeholder="どのような支援スタイルをお持ちですか？（認知行動療法、来談者中心療法など）"
+                              class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+            </section>
+
+            <!-- 活動条件 -->
+            <section class="bg-slate-50 p-6 rounded-lg">
+                <h2 class="text-xl font-bold text-slate-800 mb-6">活動条件</h2>
+
+                <div class="mb-6">
+                    <label for="consultation-method" class="block text-sm font-medium text-slate-700 mb-2">相談方法 *</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="consultation-method" value="online" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">オンライン相談</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="consultation-method" value="offline" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">対面相談</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="availability" class="block text-sm font-medium text-slate-700 mb-2">活動可能時間 *</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="availability" value="weekday-daytime" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">平日昼間（9:00-18:00）</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="availability" value="weekday-evening" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">平日夜間（18:00-22:00）</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="availability" value="weekend" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">土日祝日</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="fee" class="block text-sm font-medium text-slate-700 mb-2">希望報酬（1回50分あたり） *</label>
+                    <select id="fee" name="fee" required
+                            class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="">選択してください</option>
+                        <option value="3000-5000">3,000円 - 5,000円</option>
+                        <option value="5000-7000">5,000円 - 7,000円</option>
+                        <option value="7000-10000">7,000円 - 10,000円</option>
+                        <option value="10000+">10,000円以上</option>
+                    </select>
+                </div>
+
+                <div class="mb-6">
+                    <label class="flex items-center">
+                        <input type="checkbox" id="free-consultation" name="free-consultation" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                        <span class="ml-2 text-sm text-slate-700">初回無料相談を実施する</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- 自己PR -->
+            <section class="bg-slate-50 p-6 rounded-lg">
+                <h2 class="text-xl font-bold text-slate-800 mb-6">自己PR</h2>
+
+                <div class="mb-6">
+                    <label for="self-introduction" class="block text-sm font-medium text-slate-700 mb-2">自己紹介文 *</label>
+                    <textarea id="self-introduction" name="self-introduction" rows="6" required
+                              placeholder="クライアント様に自己紹介する文をご記入ください（200文字以上）"
+                              class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    <p class="text-xs text-slate-500 mt-1">200文字以上で入力してください</p>
+                </div>
+
+                <div class="mb-6">
+                    <label for="motivation" class="block text-sm font-medium text-slate-700 mb-2">伴走者になりたい理由 *</label>
+                    <textarea id="motivation" name="motivation" rows="4" required
+                              placeholder="なぜReliefの伴走者になりたいのかをご記入ください"
+                              class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+            </section>
+
+            <!-- 同意事項 -->
+            <section class="bg-slate-50 p-6 rounded-lg">
+                <h2 class="text-xl font-bold text-slate-800 mb-6">同意事項</h2>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="flex items-start">
+                            <input type="checkbox" id="terms-agreement" name="terms-agreement" required class="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">
+                                <a href="terms-mentor.html" class="text-blue-600 hover:text-blue-800 underline">伴走者利用規約</a>に同意します *
+                            </span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label class="flex items-start">
+                            <input type="checkbox" id="privacy-agreement" name="privacy-agreement" required class="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">
+                                <a href="privacy.html" class="text-blue-600 hover:text-blue-800 underline">プライバシーポリシー</a>に同意します *
+                            </span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label class="flex items-start">
+                            <input type="checkbox" id="accuracy-confirmation" name="accuracy-confirmation" required class="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-slate-700">
+                                記載された情報は正確であり、虚偽の記載がないことを確認します *
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 送信ボタン -->
+            <div class="text-center">
+                <button type="submit" class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                    登録申請を送信する
+                </button>
+                <p class="text-sm text-slate-600 mt-4">
+                    送信後、審査の結果について1週間以内にメールにてご連絡いたします。
+                </p>
+            </div>
+        </form>
+    </main>
+
+    <div id="footer"></div>
+    <script src="assets/script.js" defer></script>
+    <script>
+        // フォームバリデーション
+        document.getElementById('mentor-register-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // 自己紹介文の文字数チェック
+            const selfIntro = document.getElementById('self-introduction').value;
+            if (selfIntro.length < 200) {
+                alert('自己紹介文は200文字以上で入力してください。');
+                return;
+            }
+
+            // 得意分野のチェック
+            const specialties = document.querySelectorAll('input[name="specialties"]:checked');
+            if (specialties.length === 0) {
+                alert('得意分野を1つ以上選択してください。');
+                return;
+            }
+
+            // 相談方法のチェック
+            const consultationMethods = document.querySelectorAll('input[name="consultation-method"]:checked');
+            if (consultationMethods.length === 0) {
+                alert('相談方法を1つ以上選択してください。');
+                return;
+            }
+
+            // 活動可能時間のチェック
+            const availabilities = document.querySelectorAll('input[name="availability"]:checked');
+            if (availabilities.length === 0) {
+                alert('活動可能時間を1つ以上選択してください。');
+                return;
+            }
+
+            // 送信処理（実際の送信はここで行う）
+            alert('登録申請を送信しました。審査結果をお待ちください。');
+            // this.submit(); // 実際の送信時はコメントアウトを外す
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>莨ｴ襍ｰ閠・匳骭ｲ - Relief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-700">
+    <!-- 繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ繝舌・ -->
+    <div id="nav"></div>
+
+    <!-- 繝｡繧､繝ｳ繧ｳ繝ｳ繝・Φ繝・-->
+    <main class="max-w-3xl mx-auto p-4 py-12">
+        <h1 class="text-4xl font-bold text-slate-800 mb-4">莨ｴ襍ｰ閠・匳骭ｲ</h1>
+        <p class="text-lg text-slate-600 mb-4">
+            Relief 縺ｮ莨ｴ襍ｰ閠・→縺励※縲∽ｸ咲匳譬｡繧・匱驕疲髪謠ｴ縺ｧ謔ｩ繧蟄舌←繧ゅ◆縺｡縺ｨ縺昴・螳ｶ譌上ｒ繧ｵ繝昴・繝医＠縺ｦ縺上□縺輔ｋ譁ｹ繧貞供髮・＠縺ｦ縺・∪縺吶・
+        </p>
+
+        <!-- 莨ｴ襍ｰ閠・→縺ｯ -->
+        <section class="mb-12 bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
+            <h2 class="text-2xl font-bold text-slate-800 mb-4">莨ｴ襍ｰ閠・↓縺､縺・※</h2>
+            <p class="text-slate-700 mb-4">
+                Relief 縺ｮ莨ｴ襍ｰ閠・・縲∝腰縺ｪ繧九メ繝･繝ｼ繧ｿ繝ｼ縺ｧ縺ｯ縺ｪ縺上∝ｭ舌←繧ゅ・莠ｺ逕溘・莨ｴ襍ｰ閠・〒縺吶ら嶌隲・ｒ蜿励￠繧九∬ｩｱ繧定◇縺上∽ｸ邱偵↓逶ｮ讓吶ｒ遶九※繧九・ｲ謐励ｒ隕句ｮ医ｋ窶ｦ縺薙≧縺励◆髢｢繧上ｊ繧帝壹§縺ｦ縲∝ｭ舌←繧ゅ◆縺｡縺ｮ蜿ｯ閭ｽ諤ｧ繧貞ｼ輔″蜃ｺ縺吶♀謇倶ｼ昴＞繧偵＠縺ｾ縺吶・
+            </p>
+            <h3 class="text-xl font-bold text-slate-800 mb-3">蠢・ｦ√↑雉・ｳｪ</h3>
+            <ul class="space-y-2 text-slate-700">
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笨・/span>
+                    <span>蟄舌←繧ゅｄ闍･閠・・謾ｯ謠ｴ縺ｫ辭ｱ蠢・〒縺ゅｋ</span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笨・/span>
+                    <span>繧ｳ繝溘Η繝九こ繝ｼ繧ｷ繝ｧ繝ｳ閭ｽ蜉帙′鬮倥＞</span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笨・/span>
+                    <span>螟壽ｧ倥↑繝舌ャ繧ｯ繧ｰ繝ｩ繧ｦ繝ｳ繝峨ｄ萓｡蛟､隕ｳ繧貞ｰ企㍾縺ｧ縺阪ｋ</span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笨・/span>
+                    <span>雋ｬ莉ｻ諢溘ｒ謖√▲縺ｦ邯咏ｶ夂噪縺ｫ繧ｵ繝昴・繝医〒縺阪ｋ</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 逋ｻ骭ｲ繝輔か繝ｼ繝 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">逋ｻ骭ｲ繝輔か繝ｼ繝</h2>
+            <p class="text-slate-600 mb-6">
+                莉･荳九・繝輔か繝ｼ繝縺ｫ蠢・ｦ∽ｺ矩・ｒ縺泌・蜉帙￥縺縺輔＞縲・icrosoft Forms 縺ｧ逋ｻ骭ｲ繧貞女縺台ｻ倥￠縺ｦ縺・∪縺吶・
+            </p>
+
+            <!-- Microsoft Forms 縺ｮ iframe -->
+            <div class="bg-gray-100 border border-slate-200 rounded-lg overflow-hidden shadow-md">
+                <iframe 
+                    src="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_FORM_ID" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    style="width:100%; height:600px; min-height:600px; border:none;">
+                    繝輔か繝ｼ繝繧定ｪｭ縺ｿ霎ｼ縺ｿ荳ｭ窶ｦ
+                </iframe>
+            </div>
+
+            <p class="text-sm text-slate-500 mt-4">
+                窶ｻ Microsoft Forms 縺瑚ｪｭ縺ｿ霎ｼ繧√↑縺・ｴ蜷医・縲・a href="faq-contact.html" class="text-blue-600 hover:underline">蛻･縺ｮ繝輔か繝ｼ繝</a>縺九ｉ縺ｮ縺皮匳骭ｲ繧ょ庄閭ｽ縺ｧ縺吶・
+            </p>
+        </section>
+
+        <!-- 繝励Ο繧ｻ繧ｹ隱ｬ譏・-->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">逋ｻ骭ｲ蠕後・繝励Ο繧ｻ繧ｹ</h2>
+            <div class="space-y-6">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                        1
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2">逕ｳ縺苓ｾｼ縺ｿ蜿嶺ｻ・/h3>
+                        <p class="text-slate-600">繝輔か繝ｼ繝騾∽ｿ｡蠕後・°蝟ｶ繝√・繝縺悟・螳ｹ繧堤｢ｺ隱阪＠縺ｾ縺吶・/p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                        2
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2">髱｢謗･繝ｻ遐比ｿｮ</h3>
+                        <p class="text-slate-600">繧ｪ繝ｳ繝ｩ繧､繝ｳ髱｢謗･繧貞ｮ滓命縺励ヽelief 縺ｮ逅・ｿｵ繧・ｯｾ蠢懈婿豕輔↓縺､縺・※縺ｮ遐比ｿｮ繧定｡後＞縺ｾ縺吶・/p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                        3
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2">隱榊ｮ壹・驟咲ｽｮ</h3>
+                        <p class="text-slate-600">隱榊ｮ壼ｾ後√Θ繝ｼ繧ｶ繝ｼ縺輔ｓ縺ｮ繝槭ャ繝√Φ繧ｰ縺碁幕蟋九＆繧後∪縺吶・/p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                        4
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2">邯咏ｶ夂噪縺ｪ繧ｵ繝昴・繝・/h3>
+                        <p class="text-slate-600">繧ｹ繝ｼ繝代・繝舌う繧ｶ繝ｼ縺ｫ繧医ｋ螳壽悄逧・↑繧ｵ繝昴・繝医→遐比ｿｮ縺ｮ讖滉ｼ壹ｒ謠蝉ｾ帙＠縺ｾ縺吶・/p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 驥崎ｦ√↑諠・ｱ -->
+        <section class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded mb-12">
+            <h3 class="text-lg font-bold text-amber-900 mb-4">驥崎ｦ√↑豕ｨ諢丈ｺ矩・/h3>
+            <ul class="space-y-3 text-amber-900">
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笞</span>
+                    <span>Relief 縺ｮ莨ｴ襍ｰ閠・・縲∝倶ｺｺ諠・ｱ菫晁ｭｷ譁ｹ驥昴↓蜴ｳ蟇・↓蠕薙≧蠢・ｦ√′縺ゅｊ縺ｾ縺・/span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笞</span>
+                    <span>譛ｪ謌仙ｹｴ閠・∈縺ｮ謗･隗ｦ縺ｫ縺､縺・※縺ｮ蜴ｳ譬ｼ縺ｪ繧ｬ繧､繝峨Λ繧､繝ｳ縺瑚ｨｭ螳壹＆繧後※縺・∪縺・/span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笞</span>
+                    <span>繧ｵ繝ｼ繝薙せ縺ｫ謾ｯ髫懊′蜃ｺ縺溷ｴ蜷医・蜊ｳ蠎ｧ縺ｫ蝣ｱ蜻翫☆繧狗ｾｩ蜍吶′縺ゅｊ縺ｾ縺・/span>
+                </li>
+                <li class="flex gap-2">
+                    <span class="flex-shrink-0">笞</span>
+                    <span><a href="terms-mentor.html" class="text-blue-600 hover:underline">莨ｴ襍ｰ閠・髄縺大茜逕ｨ隕冗ｴ・/a>繧貞ｿ・★縺願ｪｭ縺ｿ縺上□縺輔＞</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 繧医￥縺ゅｋ雉ｪ蝠・-->
+        <section class="bg-slate-50 p-6 rounded-lg mb-12">
+            <h3 class="text-xl font-bold text-slate-800 mb-4">莨ｴ襍ｰ閠・↓縺､縺・※縺ｮ繧医￥縺ゅｋ雉ｪ蝠・/h3>
+            <div class="space-y-3">
+                <details class="bg-white p-4 rounded border border-slate-200 cursor-pointer">
+                    <summary class="font-semibold text-slate-800">邨ｦ荳弱ｄ蝣ｱ驟ｬ縺ｯ縺ゅｊ縺ｾ縺吶°・・/summary>
+                    <p class="mt-2 text-slate-600">縺ｯ縺・ゆｼｴ襍ｰ閠・↓縺ｯ驕ｩ蛻・↑蝣ｱ驟ｬ繧偵♀謾ｯ謇輔＞縺励∪縺吶りｩｳ縺励￥縺ｯ髱｢謗･譎ゅ↓縺碑ｪｬ譏弱＠縺ｾ縺吶・/p>
+                </details>
+                <details class="bg-white p-4 rounded border border-slate-200 cursor-pointer">
+                    <summary class="font-semibold text-slate-800">蝨ｨ螳・共蜍吶・蜿ｯ閭ｽ縺ｧ縺吶°・・/summary>
+                    <p class="mt-2 text-slate-600">縺ｯ縺・ゅが繝ｳ繝ｩ繧､繝ｳ髱｢隲・′蜿ｯ閭ｽ縺ｪ迺ｰ蠅・〒縺ゅｌ縺ｰ縲√＃閾ｪ螳・°繧峨・繧ｵ繝昴・繝医ｂ蜿ｯ閭ｽ縺ｧ縺吶・/p>
+                </details>
+                <details class="bg-white p-4 rounded border border-slate-200 cursor-pointer">
+                    <summary class="font-semibold text-slate-800">譎る俣縺ｮ陞埼壹・蛻ｩ縺阪∪縺吶°・・/summary>
+                    <p class="mt-2 text-slate-600">繝ｦ繝ｼ繧ｶ繝ｼ縺輔ｓ縺ｮ蟶梧悍縺ｫ蠢懊§縺ｦ縲√≠繧狗ｨ句ｺｦ縺ｮ譎る俣隱ｿ謨ｴ縺ｯ蜿ｯ閭ｽ縺ｧ縺吶ゅ◆縺縺励∽ｸ螳壽凾髢薙・蟇ｾ蠢懷庄閭ｽ譎る俣蟶ｯ縺ｮ逋ｻ骭ｲ縺悟ｿ・ｦ√〒縺吶・/p>
+                </details>
+            </div>
+        </section>
+
+        <!-- 蝠上＞蜷医ｏ縺・-->
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">縺碑ｳｪ蝠上・縺ゅｊ縺ｾ縺吶°・・/h3>
+            <p class="text-slate-600 mb-6">逋ｻ骭ｲ蜑阪↓縺碑ｳｪ蝠上ｄ縺比ｸ肴・縺ｪ轤ｹ縺後＃縺悶＞縺ｾ縺励◆繧峨√♀豌苓ｻｽ縺ｫ縺雁撫縺・粋繧上○縺上□縺輔＞縲・/p>
+            <a href="faq-contact.html" class="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+                縺雁撫縺・粋繧上○
+            </a>
+        </div>
+    </main>
+
+    <!-- 繝輔ャ繧ｿ繝ｼ -->
+    <div id="footer"></div>
+
+    <script src="/assets/script.js"></script>
+</body>
+</html>
