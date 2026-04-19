@@ -1,7 +1,7 @@
-// 共通パーツ読み込み
+﻿// 共通パーツ読み込み
 document.addEventListener("DOMContentLoaded", () => {
-    includeHTML("#nav", "components/nav.html");
-    includeHTML("#footer", "components/footer.html");
+    includeHTML("#nav", "./components/nav.html");
+    includeHTML("#footer", "./components/footer.html");
 });
 
 function includeHTML(targetSelector, filePath) {
