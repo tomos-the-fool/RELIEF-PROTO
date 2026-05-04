@@ -1,0 +1,98 @@
+:root {
+	--relief-white: #ffffff;
+	--relief-ink: #334155;
+	--relief-sub: #32adc6;
+	--relief-sub-deep: #248ea6;
+	--relief-sub-soft: #eefbfd;
+	--relief-sub-soft-2: #d9f4f8;
+	--relief-coral: #f08f7a;
+	--relief-coral-soft: #fde8e1;
+	--relief-gold: #f1c75b;
+	--relief-gold-soft: #fff5d8;
+	--relief-violet: #b89de4;
+	--relief-violet-soft: #f1eafe;
+}
+
+body {
+	background-color: var(--relief-white);
+	color: var(--relief-ink);
+}
+
+.bg-white {
+	background-color: var(--relief-white) !important;
+}
+
+.bg-slate-50 {
+	background-color: #f9fcfd !important;
+}
+
+.bg-blue-50 {
+	background-color: var(--relief-sub-soft) !important;
+}
+
+.bg-blue-100 {
+	background-color: var(--relief-sub-soft-2) !important;
+}
+
+.bg-blue-600 {
+	background-color: var(--relief-sub) !important;
+}
+
+.hover\:bg-blue-700:hover {
+	background-color: var(--relief-sub-deep) !important;
+}
+
+.text-blue-600 {
+	color: var(--relief-sub) !important;
+}
+
+.text-blue-800 {
+	color: #1f6f80 !important;
+}
+
+.border-blue-200 {
+	border-color: #bde8ef !important;
+}
+
+.border-blue-600 {
+	border-color: var(--relief-sub) !important;
+}
+
+.from-blue-400 {
+	--tw-gradient-from: #64c9d9 var(--tw-gradient-from-position) !important;
+	--tw-gradient-to: rgb(100 201 217 / 0) var(--tw-gradient-to-position) !important;
+	--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.to-blue-600 {
+	--tw-gradient-to: var(--relief-sub) var(--tw-gradient-to-position) !important;
+}
+
+.bg-green-100 {
+	background-color: var(--relief-gold-soft) !important;
+}
+
+.text-green-800 {
+	color: #a76e00 !important;
+}
+
+.bg-purple-100 {
+	background-color: var(--relief-violet-soft) !important;
+}
+
+.bg-red-100 {
+	background-color: var(--relief-coral-soft) !important;
+}
+
+.text-yellow-400 {
+	color: var(--relief-gold) !important;
+}
+
+a {
+	transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+::selection {
+	background-color: var(--relief-coral-soft);
+	color: #7a3a2f;
+}
