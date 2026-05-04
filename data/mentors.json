@@ -1,0 +1,56 @@
+[
+	{
+		"id": 1,
+		"name": "平口あずさ",
+		"initial": "平口",
+		"image": "./img/1.jpg",
+		"title": "伴走者",
+		"experience": "1年",
+		"qualifications": ""
+	},
+	{
+		"id": 2,
+		"name": "佐藤花子",
+		"initial": "佐藤",
+		"image": "",
+		"title": "心理カウンセラー",
+		"experience": "12年",
+		"qualifications": "臨床心理士、公認心理師"
+	},
+	{
+		"id": 3,
+		"name": "鈴木一郎",
+		"initial": "鈴木",
+		"image": "",
+		"title": "発達支援専門家",
+		"experience": "10年",
+		"qualifications": "特別支援教育士、行動療法士"
+	},
+	{
+		"id": 4,
+		"name": "高橋美咲",
+		"initial": "高橋",
+		"image": "",
+		"title": "ソーシャルワーカー",
+		"experience": "15年",
+		"qualifications": "社会福祉士、ケースワーカー"
+	},
+	{
+		"id": 5,
+		"name": "中村健太",
+		"initial": "中村",
+		"image": "",
+		"title": "教育支援専門家",
+		"experience": "6年",
+		"qualifications": "学習科学修士、学習コーチ"
+	},
+	{
+		"id": 6,
+		"name": "小林真理",
+		"initial": "小林",
+		"image": "",
+		"title": "心理カウンセラー",
+		"experience": "9年",
+		"qualifications": "臨床心理士、EMDR療法士"
+	}
+]

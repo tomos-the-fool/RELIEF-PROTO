@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>伴走者詳細 - Relief</title>
+    <title>伴走者詳細 - りりーふプロジェクト</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-slate-700">
@@ -15,18 +15,19 @@
         <!-- 伴走者プロフィール -->
         <div class="mb-12 flex flex-col sm:flex-row gap-8">
             <div class="flex-shrink-0">
-                <div class="w-40 h-40 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
-                    <div class="text-6xl font-bold text-white">YS</div>
+                <div class="w-40 h-40 rounded-lg overflow-hidden border border-slate-200">
+                    <img id="mentor-image" src="" alt="伴走者の写真" class="w-full h-full object-cover hidden">
+                    <div id="mentor-initial-avatar" class="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <div id="mentor-initial-text" class="text-5xl font-bold text-white">YS</div>
+                    </div>
                 </div>
             </div>
             <div class="flex-1">
-                <h1 class="text-3xl font-bold text-slate-800 mb-2">山田 太郎</h1>
-                <p class="text-lg text-slate-600 mb-4">臨床心理士・キャリアカウンセラー</p>
+                <h1 id="mentor-name" class="text-3xl font-bold text-slate-800 mb-2">山田 太郎</h1>
+                <p id="mentor-title" class="text-lg text-slate-600 mb-4">臨床心理士・キャリアカウンセラー</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">うつ病</span>
-                    <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">キャリア</span>
-                    <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">人間関係</span>
-                    <span class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">初回無料相談</span>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">伴走者</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">相談受付中</span>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                     <div class="text-center">
@@ -38,7 +39,7 @@
                         <div class="text-sm text-slate-600">評価平均</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-slate-800">3年</div>
+                        <div id="mentor-experience" class="text-2xl font-bold text-slate-800">3年</div>
                         <div class="text-sm text-slate-600">経験年数</div>
                     </div>
                 </div>
@@ -87,7 +88,7 @@
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-bold text-slate-800 mb-4">得意分野</h2>
+                    <h2 class="text-xl font-bold text-slate-800 mb-4">対応内容</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="bg-slate-50 p-4 rounded-lg">
                             <h3 class="font-semibold text-slate-800 mb-2">うつ病・気分障害</h3>
@@ -135,7 +136,7 @@
                                 <h3 class="font-semibold text-slate-800">臨床心理士</h3>
                                 <span class="text-sm text-slate-600">2021年 - 現在</span>
                             </div>
-                            <p class="text-slate-600 text-sm">Reliefにて伴走者として活動。50名以上のクライアント様の支援実績。</p>
+                            <p class="text-slate-600 text-sm">りりーふプロジェクトにて伴走者として活動。50名以上のクライアント様の支援実績。</p>
                         </div>
                         <div class="border-l-4 border-slate-300 pl-4">
                             <div class="flex items-center justify-between mb-2">
@@ -156,32 +157,7 @@
 
                 <section>
                     <h2 class="text-xl font-bold text-slate-800 mb-4">資格・研修</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-                            <span class="text-slate-700">臨床心理士</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-                            <span class="text-slate-700">キャリアカウンセラー</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-                            <span class="text-slate-700">認知行動療法研修修了</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-                            <span class="text-slate-700">マインドフルネスインストラクター</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-                            <span class="text-slate-700">産業カウンセラー</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-                            <span class="text-slate-700">NLPプラクティショナー</span>
-                        </div>
-                    </div>
+                    <p id="mentor-qualifications" class="text-slate-700"></p>
                 </section>
             </div>
         </div>
@@ -343,10 +319,67 @@
     <div id="footer"></div>
     <script src="assets/script.js" defer></script>
     <script>
+        async function loadMentorDetail() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                const mentorId = params.get('id');
+
+                if (!mentorId) {
+                    return;
+                }
+
+                const response = await fetch('data/mentors.json');
+                const mentors = await response.json();
+
+                if (!Array.isArray(mentors)) {
+                    throw new Error('Invalid mentors data format');
+                }
+
+                const mentor = mentors.find(item => String(item.id) === mentorId);
+
+                if (!mentor) {
+                    return;
+                }
+
+                const mentorName = document.getElementById('mentor-name');
+                const mentorTitle = document.getElementById('mentor-title');
+                const mentorExperience = document.getElementById('mentor-experience');
+                const mentorImage = document.getElementById('mentor-image');
+                const mentorInitialAvatar = document.getElementById('mentor-initial-avatar');
+                const mentorInitialText = document.getElementById('mentor-initial-text');
+
+                const mentorQualifications = document.getElementById('mentor-qualifications');
+
+                mentorName.textContent = mentor.name || mentorName.textContent;
+                mentorTitle.textContent = mentor.title || mentorTitle.textContent;
+                mentorExperience.textContent = mentor.experience || mentorExperience.textContent;
+                mentorQualifications.textContent = mentor.qualifications ?? '';
+                document.title = `${mentor.name} - 伴走者詳細 - りりーふプロジェクト`;
+
+                mentorInitialText.textContent = mentor.initial || (mentor.name ? mentor.name.slice(0, 2) : '伴走');
+
+                if (mentor.image) {
+                    mentorImage.src = mentor.image;
+                    mentorImage.alt = `${mentor.name}の写真`;
+                    mentorImage.classList.remove('hidden');
+                    mentorInitialAvatar.classList.add('hidden');
+
+                    mentorImage.onerror = function() {
+                        mentorImage.classList.add('hidden');
+                        mentorInitialAvatar.classList.remove('hidden');
+                    };
+                }
+            } catch (error) {
+                console.error('伴走者詳細データの読み込みに失敗しました:', error);
+            }
+        }
+
         // タブ切り替え機能
         document.addEventListener('DOMContentLoaded', function() {
             const tabButtons = document.querySelectorAll('.tab-button');
             const tabContents = document.querySelectorAll('.tab-content');
+
+            loadMentorDetail();
 
             tabButtons.forEach(button => {
                 button.addEventListener('click', function() {
