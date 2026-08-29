@@ -96,3 +96,83 @@ a {
 	background-color: var(--relief-coral-soft);
 	color: #7a3a2f;
 }
+
+@media (max-width: 767px) {
+	html {
+		-webkit-text-size-adjust: 100%;
+	}
+
+	body {
+		font-size: 1rem;
+		line-height: 1.7;
+	}
+
+	main {
+		padding-left: 1rem !important;
+		padding-right: 1rem !important;
+	}
+
+	main.py-12 {
+		padding-top: 2.5rem !important;
+		padding-bottom: 2.5rem !important;
+	}
+
+	main > section + section {
+		margin-top: 2rem !important;
+	}
+
+	.mb-12 {
+		margin-bottom: 2.5rem !important;
+	}
+
+	.mt-12 {
+		margin-top: 2.5rem !important;
+	}
+
+	.p-6 {
+		padding: 1.25rem !important;
+	}
+
+	.p-8 {
+		padding: 1.5rem !important;
+	}
+
+	h1.text-4xl {
+		font-size: 2rem !important;
+		line-height: 1.3 !important;
+	}
+
+	main h2.text-3xl {
+		font-size: 1.5rem !important;
+		line-height: 1.4 !important;
+	}
+
+	main h2.text-2xl,
+	main h3.text-2xl {
+		font-size: 1.35rem !important;
+		line-height: 1.45 !important;
+	}
+
+	button,
+	input,
+	select,
+	textarea,
+	a.inline-flex,
+	a.bg-blue-600,
+	a.bg-slate-900 {
+		min-height: 44px;
+	}
+
+	button,
+	a.inline-flex,
+	a.bg-blue-600,
+	a.bg-slate-900 {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#nav .mobile-menu a {
+		min-height: 44px;
+	}
+}
